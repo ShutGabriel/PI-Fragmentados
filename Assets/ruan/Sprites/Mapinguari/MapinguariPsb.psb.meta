@@ -9989,6 +9989,61 @@ ScriptedImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: iPhone
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: WebGL
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Windows Store Apps
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: tvOS
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   mosaicLayers: 1
   characterMode: 1
   documentPivot: {x: 0.5, y: 0}
@@ -10007,6 +10062,16 @@ ScriptedImporter:
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
+  - name: "Bra\xE7o1"
+    spriteName: "Bra\xE7o1"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: e8f9a7c73edaa2241ab3d97130b836ff
+    layerID: 6
+    mosaicPosition: {x: 700, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: boca sorindo
     spriteName: boca sorindo
     isGroup: 0
@@ -10044,16 +10109,6 @@ ScriptedImporter:
     spriteID: 4a4d95239067541438945968618dffc5
     layerID: 10
     mosaicPosition: {x: 1011, y: 891}
-    flatten: 0
-    isImported: 1
-    isVisible: 1
-  - name: "Bra\xE7o1"
-    spriteName: "Bra\xE7o1"
-    isGroup: 0
-    parentIndex: -1
-    spriteID: e8f9a7c73edaa2241ab3d97130b836ff
-    layerID: 6
-    mosaicPosition: {x: 700, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
