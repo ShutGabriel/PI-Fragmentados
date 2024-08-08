@@ -1,0 +1,67 @@
+{
+    "name": "Moveplayer2",
+    "maps": [
+        {
+            "name": "Player 2",
+            "id": "efe1a182-4a48-4589-9fc8-ae4c5032becd",
+            "actions": [
+                {
+                    "name": "Teclado",
+                    "type": "Button",
+                    "id": "111efab8-dd23-41c2-a109-1f3e4ddb84f7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "121e4fbd-09cb-4b76-abf3-ba9921018a95",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Teclado",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c81ddf5b-0d4c-46e0-b2d6-d1030800626e",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Teclado",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c82c32ee-1cb2-43f8-ae5c-4f2958c29881",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Teclado",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "eeb4f9d2-eeea-4d27-849b-2bd7512f58bd",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Teclado",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
