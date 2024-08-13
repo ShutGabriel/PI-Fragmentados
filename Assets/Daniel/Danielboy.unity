@@ -208,13 +208,90 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 58534014}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: -0.75, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &875672785
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 875672786}
+  - component: {fileID: 875672787}
+  m_Layer: 0
+  m_Name: checkground
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &875672786
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875672785}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.01, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1033211086}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &875672787
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875672785}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.008754134, y: 0.008753866}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.2976334, y: 0.21214765}
+  m_EdgeRadius: 0
 --- !u!1 &1033211080
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,9 +325,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d47ce41326ff6474e92440581e23d97b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 25
+  _speed: 5
   _rb: {fileID: 0}
   _move: {x: 0, y: 0}
+  _forceJump: 50
+  _checkground: 0
 --- !u!114 &1033211082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,45 +372,21 @@ MonoBehaviour:
     m_ActionId: 0af0d98f-b716-45ab-8733-88639f216d39
     m_ActionName: Player1/Movimento[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 62589319-46d1-4577-bc66-64f8d4b5e7ac
-    m_ActionName: Player1/A[/Keyboard/space]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 176409be-3d6f-45e5-ac7b-3cb114cd84bc
-    m_ActionName: Player1/B
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 848cca89-c15e-464b-b4e5-3da745244c62
-    m_ActionName: Player1/X
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 64620470-5e62-4bcc-917f-260805492fa2
-    m_ActionName: Player1/Y
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 149bb1db-c62d-4ca8-96f5-648f209b77ca
-    m_ActionName: Player1/LB
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: e93d0300-6808-49ad-9841-228b7d23f8c1
-    m_ActionName: Player1/LT
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: cc87e4e7-64d1-49ad-96bc-4b75d548cd6d
-    m_ActionName: Player1/RB
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 34753ab0-35e9-45b1-8fe9-a45a1ef6b22c
-    m_ActionName: Player1/RT
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 85282ed2-0ba4-45f1-92a6-25185c4a72ca
-    m_ActionName: Player1/Start
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 38e3fc9c-dd03-4a83-af67-303f08efeffa
-    m_ActionName: Player1/Select
+      m_Calls:
+      - m_Target: {fileID: 1033211081}
+        m_TargetAssemblyTypeName: Moveplayer, Assembly-CSharp
+        m_MethodName: SetJump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3cb24429-d615-4649-ac87-f683671345de
+    m_ActionName: Player1/Jump[/XInputControllerWindows/buttonSouth,/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player1
@@ -349,7 +404,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -459,10 +514,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1033211080}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.29, y: 1.43, z: 0}
+  m_LocalPosition: {x: 0.08, y: -0.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 875672786}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -479,7 +535,7 @@ GameObject:
   - component: {fileID: 1193306243}
   m_Layer: 0
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

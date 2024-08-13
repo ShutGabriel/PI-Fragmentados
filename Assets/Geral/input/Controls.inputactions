@@ -15,94 +15,13 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "A",
-                    "type": "Button",
-                    "id": "62589319-46d1-4577-bc66-64f8d4b5e7ac",
+                    "name": "Jump",
+                    "type": "Value",
+                    "id": "3cb24429-d615-4649-ac87-f683671345de",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "B",
-                    "type": "Button",
-                    "id": "176409be-3d6f-45e5-ac7b-3cb114cd84bc",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "X",
-                    "type": "Button",
-                    "id": "848cca89-c15e-464b-b4e5-3da745244c62",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Y",
-                    "type": "Button",
-                    "id": "64620470-5e62-4bcc-917f-260805492fa2",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "LB",
-                    "type": "Button",
-                    "id": "149bb1db-c62d-4ca8-96f5-648f209b77ca",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "LT",
-                    "type": "Button",
-                    "id": "e93d0300-6808-49ad-9841-228b7d23f8c1",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "RB",
-                    "type": "Button",
-                    "id": "cc87e4e7-64d1-49ad-96bc-4b75d548cd6d",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "RT",
-                    "type": "Button",
-                    "id": "34753ab0-35e9-45b1-8fe9-a45a1ef6b22c",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Start",
-                    "type": "Button",
-                    "id": "85282ed2-0ba4-45f1-92a6-25185c4a72ca",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Select",
-                    "type": "Button",
-                    "id": "38e3fc9c-dd03-4a83-af67-303f08efeffa",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -273,122 +192,23 @@
                 },
                 {
                     "name": "",
-                    "id": "6cea40d0-8d8c-4ce1-b69b-b3f101200fb8",
+                    "id": "0bd441fb-4de7-4000-9c18-14947f4130a7",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "Player1",
-                    "action": "A",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "9e2aae3c-422a-47bc-bbc7-7cb79a42f767",
+                    "id": "abaffc28-a30e-4b03-88f1-d54e93f69850",
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "Player1",
-                    "action": "A",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "7e877a20-42e9-48dc-950d-740cfac20b4f",
-                    "path": "<Gamepad>/buttonEast",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "B",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "12b099d9-0986-4ca6-998d-61e12144eaed",
-                    "path": "<Gamepad>/buttonWest",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "X",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "bb39d185-87ca-48a6-9e5c-fd5348213b84",
-                    "path": "<Gamepad>/buttonNorth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Y",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "0301f2ed-316d-4e48-842a-96de7c208ecc",
-                    "path": "<Gamepad>/leftShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "LB",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "54e7e7a3-cb30-4e4f-9572-2915ad05c11c",
-                    "path": "<Gamepad>/leftTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "LT",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "a11bb99e-1554-4cbe-b7ab-fc193e7a1834",
-                    "path": "<Gamepad>/rightShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "RB",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "76a1b7a7-fcb0-4865-bc3c-18737c962741",
-                    "path": "<Gamepad>/rightTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "RT",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "1886f200-3df4-4cae-9623-e376a81aebfc",
-                    "path": "<Gamepad>/start",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Start",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "6c83bed4-6d9b-463d-b332-9277fff63f02",
-                    "path": "<Gamepad>/select",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Select",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
