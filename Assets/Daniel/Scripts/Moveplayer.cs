@@ -9,10 +9,10 @@ public class Moveplayer : MonoBehaviour
     [SerializeField] float _speed;
     [SerializeField] Rigidbody2D _rb;
     [SerializeField] Vector2 _move;
-
+    [SerializeField] float _forceJump;
 
     bool _facingRight;
-
+    public bool _checkground;
 
 
     // Start is called before the first frame update
@@ -70,6 +70,57 @@ public class Moveplayer : MonoBehaviour
 
 
     }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.gameObject.CompareTag("ground"))
+        {
+
+            Debug.Log("touched the ground");
+
+            _checkground = true;
+
+        }
+
+
+
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+
+        if (collision.gameObject.CompareTag("ground"))
+        {
+
+            Debug.Log("left the ground");
+
+            _checkground = false;
+        }
+
+
+
+    }
+
+
+    public void SetJump(InputAction.CallbackContext value)
+    {
+
+
+        if (_checkground == true)
+        {
+            _rb.velocity = new Vector2(_rb.velocity.x, 0);
+            _rb.AddForce(Vector2.up * _forceJump, ForceMode2D.Impulse);
+          
+
+
+        }
+
+    }
+
+
+
 
 
 
