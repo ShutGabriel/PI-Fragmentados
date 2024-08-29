@@ -10,6 +10,9 @@ public class Moveplayer : MonoBehaviour
     [SerializeField] Rigidbody2D _rb;
     [SerializeField] Vector2 _move;
     [SerializeField] float _forceJump;
+    public GameObject bala;
+    public Transform bulletPoint;
+    public Transform bulletPointCima;
 
     bool _facingRight;
     public bool _checkground;
@@ -40,7 +43,7 @@ public class Moveplayer : MonoBehaviour
             flip();
         }
 
-
+        
 
 
     }
@@ -120,7 +123,19 @@ public class Moveplayer : MonoBehaviour
     }
 
 
+    public void shoot()
+    {
 
+        
+        
+        Instantiate(bala, bulletPoint.position, bala.transform.rotation);
+
+
+
+
+
+
+    }
 
 
 
