@@ -17,6 +17,8 @@ public class Moveplayer : MonoBehaviour
     bool _facingRight;
     public bool _checkground;
 
+    public Animator _animator;
+
 
     // Start is called before the first frame update
     void Start()
@@ -37,13 +39,19 @@ public class Moveplayer : MonoBehaviour
         if (_move.x > 0 && _facingRight == true)
         {
             flip();
+
+
+            
         }
         else if (_move.x < 0 && _facingRight == false)
         {
             flip();
+
+
+            
         }
 
-        
+        animControl();
 
 
     }
@@ -137,6 +145,27 @@ public class Moveplayer : MonoBehaviour
 
     }
 
+
+    public void animControl()
+    {
+        if (_move.x != 0)
+        {
+
+            _animator.SetBool("Walk", true);
+
+            
+
+
+        }
+
+        else
+        {
+
+            _animator.SetBool("Walk", false);
+
+        }
+
+    }
 
 
 }

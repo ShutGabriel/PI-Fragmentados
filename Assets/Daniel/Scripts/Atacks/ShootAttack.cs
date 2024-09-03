@@ -17,15 +17,8 @@ public class ShootAttack : MonoBehaviour
     {
 
         Player = Camera.main.GetComponent<control>();
- 
 
 
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
 
         if (Player._player.transform.localScale.x > 0)
         {
@@ -35,7 +28,14 @@ public class ShootAttack : MonoBehaviour
         {
             _rb.velocity = new Vector2(-_speed, 0);
         }
-       
+
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
 
         timetodie += Time.deltaTime;
 
