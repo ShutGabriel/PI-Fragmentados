@@ -166,6 +166,7 @@ public class Moveplayer : MonoBehaviour
 
         }
 
+        _animator.SetFloat("speedY", _rb.velocity.y);
         _animator.SetBool("noChao", _checkground);
 
     }
