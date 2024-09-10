@@ -124,9 +124,6 @@ public class Moveplayer : MonoBehaviour
             _rb.velocity = new Vector2(_rb.velocity.x, 0);
             _rb.AddForce(Vector2.up * _forceJump, ForceMode2D.Impulse);
             _animator.SetTrigger("Jump");
-          
-
-
         }
 
     }
@@ -166,6 +163,7 @@ public class Moveplayer : MonoBehaviour
 
         }
 
+        _animator.SetInteger("speedYint", (int)_rb.velocity.y);
         _animator.SetFloat("speedY", _rb.velocity.y);
         _animator.SetBool("noChao", _checkground);
 
