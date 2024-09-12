@@ -14,10 +14,12 @@ public class Moveplayer : MonoBehaviour
     public Transform bulletPoint;
     public Transform bulletPointCima;
 
+
     bool _facingRight;
     public bool _checkground;
 
     public Animator _animator;
+    public bool shootanim;
 
 
     // Start is called before the first frame update
@@ -33,6 +35,10 @@ public class Moveplayer : MonoBehaviour
     {
         
         _rb.velocity = new Vector2(_move.x * _speed, _rb.velocity.y);
+
+
+
+        
 
 
 
@@ -115,6 +121,11 @@ public class Moveplayer : MonoBehaviour
     }
 
 
+   
+
+
+
+
     public void SetJump(InputAction.CallbackContext value)
     {
 
@@ -134,15 +145,26 @@ public class Moveplayer : MonoBehaviour
 
         
         
-        Instantiate(bala, bulletPoint.position, bala.transform.rotation);
+        if (Instantiate(bala, bulletPoint.position, bala.transform.rotation))
+        {
+
+            _animator.SetBool("ataqueBool", true);
 
 
+        }
+       else
+        {
 
+            _animator.SetBool("ataqueBool", false);
+        }
+        
 
-
+        
 
     }
 
+
+    
 
     public void animControl()
     {
@@ -166,6 +188,8 @@ public class Moveplayer : MonoBehaviour
         _animator.SetInteger("speedYint", (int)_rb.velocity.y);
         _animator.SetFloat("speedY", _rb.velocity.y);
         _animator.SetBool("noChao", _checkground);
+
+        
 
     }
 
