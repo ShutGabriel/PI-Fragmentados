@@ -99,6 +99,10 @@ public class Moveplayer : MonoBehaviour
 
             _checkground = true;
 
+
+          
+
+
         }
 
 
@@ -142,28 +146,42 @@ public class Moveplayer : MonoBehaviour
 
     public void shoot()
     {
-
+       
         
-        
-        if (Instantiate(bala, bulletPoint.position, bala.transform.rotation))
-        {
+        _animator.SetBool("ataqueBool", true);
+        Invoke("Shootfalse", 1f);    
+    }
 
-            _animator.SetBool("ataqueBool", true);
+    public void bullet()
+    {
 
 
-        }
-       else
-        {
+        Instantiate(bala, bulletPoint.position, bala.transform.rotation);
 
-            _animator.SetBool("ataqueBool", false);
-        }
-        
-
-        
 
     }
 
 
+    public void timeShoot()
+    {
+
+
+
+
+
+
+
+
+
+    }
+
+    public void Shootfalse()
+    {
+
+        _animator.SetBool("ataqueBool", false);
+
+
+    }
     
 
     public void animControl()
@@ -192,6 +210,10 @@ public class Moveplayer : MonoBehaviour
         
 
     }
+
+    
+
+
 
 
 }
