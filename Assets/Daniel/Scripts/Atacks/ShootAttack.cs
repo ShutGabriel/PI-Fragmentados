@@ -9,7 +9,8 @@ public class ShootAttack : MonoBehaviour
     [SerializeField] Rigidbody2D _rb;
     [SerializeField] float timetodie;
     control Player;
-
+    public Animator animator;
+    public bool shootanim;
 
 
     // Start is called before the first frame update
