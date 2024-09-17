@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Pool;
 
 public class Moveplayer : MonoBehaviour
 {
@@ -155,8 +156,20 @@ public class Moveplayer : MonoBehaviour
     public void bullet()
     {
 
+        Debug.Log("0");
+        GameObject bala = BalaPool.SharedInstance.GetPooledObject();
+        if (bala != null)
+        {
+            Debug.Log("1");
+            bala.transform.position = bulletPoint.position;
+            bala.GetComponent<ShootAttack>().timerativado = true;
+            bala.SetActive(true);
+            bala.GetComponent<ShootAttack>().speedactivate();
+        }
 
-        Instantiate(bala, bulletPoint.position, bala.transform.rotation);
+
+    
+        //Instantiate(bala, bulletPoint.position, bala.transform.rotation);
 
 
     }
@@ -165,12 +178,7 @@ public class Moveplayer : MonoBehaviour
     public void timeShoot()
     {
 
-
-
-
-
-
-
+       
 
 
     }

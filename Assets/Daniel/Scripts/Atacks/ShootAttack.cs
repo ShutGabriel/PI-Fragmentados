@@ -11,6 +11,7 @@ public class ShootAttack : MonoBehaviour
     control Player;
     public Animator animator;
     public bool shootanim;
+    public bool timerativado;
 
 
     // Start is called before the first frame update
@@ -19,16 +20,10 @@ public class ShootAttack : MonoBehaviour
 
         Player = Camera.main.GetComponent<control>();
 
+        speedactivate();
 
 
-        if (Player._player.transform.localScale.x > 0)
-        {
-            _rb.velocity = new Vector2(_speed, 0);
-        }
-        else
-        {
-            _rb.velocity = new Vector2(-_speed, 0);
-        }
+
 
 
     }
@@ -38,14 +33,10 @@ public class ShootAttack : MonoBehaviour
     {
 
 
-        timetodie += Time.deltaTime;
-
-        if (timetodie > 3) 
+        if (timerativado==true)
         {
-
-            Destroy(this.gameObject);
-
-
+            Invoke("desativarbala",2);
+            timerativado = false;
         }
 
     }
@@ -65,6 +56,25 @@ public class ShootAttack : MonoBehaviour
 
     }
 
+    public void desativarbala()
+    {
+
+        gameObject.SetActive(false);
+    }
+
+    public void speedactivate()
+    {
+
+
+        if (Player._player.transform.localScale.x > 0)
+        {
+            _rb.velocity = new Vector2(_speed, 0);
+        }
+        else
+        {
+            _rb.velocity = new Vector2(-_speed, 0);
+        }
+    }
 
 }
 

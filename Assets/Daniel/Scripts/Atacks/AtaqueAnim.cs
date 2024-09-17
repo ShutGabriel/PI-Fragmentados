@@ -12,7 +12,7 @@ public class AtaqueAnim : MonoBehaviour
 
     public void shoot()
     {
-
+        Debug.Log("-1");
         _moveplayer.bullet();
 
     }
