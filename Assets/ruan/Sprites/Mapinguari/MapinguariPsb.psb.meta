@@ -7,7 +7,7 @@ ScriptedImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-  script: {instanceID: 0}
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -105,7 +105,7 @@ ScriptedImporter:
       y: 4
       width: 647
       height: 879
-    spriteID: 72e968d6a8d1b4b448f450d5cce23619
+    spriteID: 710faf4f9c37ba049a096b89d82d3570
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -126,7 +126,7 @@ ScriptedImporter:
       y: 891
       width: 303
       height: 150
-    spriteID: 0da78ef926988994dbdac40adddc3025
+    spriteID: fe6351fea39d13240a8744b45bc2c5f0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -147,7 +147,7 @@ ScriptedImporter:
       y: 1735
       width: 355
       height: 124
-    spriteID: ca43fff9b9466a34681270e0c1f09ca2
+    spriteID: fca5ed5dc9a94fd4caa72ec940dac090
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -168,7 +168,7 @@ ScriptedImporter:
       y: 563
       width: 382
       height: 475
-    spriteID: d69c7473bfc9a4349bbed546c288ae26
+    spriteID: c2193666f72b975479e192ed45d4087d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -189,7 +189,7 @@ ScriptedImporter:
       y: 891
       width: 122
       height: 166
-    spriteID: 067f201524743c845a7cff811852af17
+    spriteID: 75169a1c5c1f7fb44b32f3c8009b65ea
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -210,7 +210,7 @@ ScriptedImporter:
       y: 4
       width: 420
       height: 551
-    spriteID: 9141341b31e94e8498c8b8e95c0e6136
+    spriteID: 39e5fcc24ec91754eae2e2d4dfd3ae64
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -231,7 +231,7 @@ ScriptedImporter:
       y: 4
       width: 688
       height: 1104
-    spriteID: 00450f53997c6f546b83c3a2117f8d30
+    spriteID: 160438572e649db4483546d658b83bdf
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -252,7 +252,7 @@ ScriptedImporter:
       y: 1116
       width: 419
       height: 551
-    spriteID: 5435604bdfaf3c74ab4162f69b5381d2
+    spriteID: c5c82b0ff8aca8a4cb73ef95be9427bf
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -273,7 +273,7 @@ ScriptedImporter:
       y: 1116
       width: 709
       height: 611
-    spriteID: bfd8d5b2dabbc9943a505503caebb63d
+    spriteID: f9d653c58b92a40478881ceba1888358
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -321,7 +321,7 @@ ScriptedImporter:
     spriteName: "Bra\xE7o1"
     isGroup: 0
     parentIndex: -1
-    spriteID: 72e968d6a8d1b4b448f450d5cce23619
+    spriteID: 710faf4f9c37ba049a096b89d82d3570
     layerID: 6
     mosaicPosition: {x: 700, y: 4}
     flatten: 0
@@ -331,7 +331,7 @@ ScriptedImporter:
     spriteName: boca sorindo
     isGroup: 0
     parentIndex: -1
-    spriteID: 0da78ef926988994dbdac40adddc3025
+    spriteID: fe6351fea39d13240a8744b45bc2c5f0
     layerID: 29
     mosaicPosition: {x: 700, y: 891}
     flatten: 0
@@ -341,7 +341,7 @@ ScriptedImporter:
     spriteName: BocaFechada
     isGroup: 0
     parentIndex: -1
-    spriteID: ca43fff9b9466a34681270e0c1f09ca2
+    spriteID: fca5ed5dc9a94fd4caa72ec940dac090
     layerID: 26
     mosaicPosition: {x: 4, y: 1735}
     flatten: 0
@@ -351,7 +351,7 @@ ScriptedImporter:
     spriteName: Aberta
     isGroup: 0
     parentIndex: -1
-    spriteID: d69c7473bfc9a4349bbed546c288ae26
+    spriteID: c2193666f72b975479e192ed45d4087d
     layerID: 20
     mosaicPosition: {x: 1355, y: 563}
     flatten: 0
@@ -361,7 +361,7 @@ ScriptedImporter:
     spriteName: olho
     isGroup: 0
     parentIndex: -1
-    spriteID: 067f201524743c845a7cff811852af17
+    spriteID: 75169a1c5c1f7fb44b32f3c8009b65ea
     layerID: 10
     mosaicPosition: {x: 1011, y: 891}
     flatten: 0
@@ -371,7 +371,7 @@ ScriptedImporter:
     spriteName: pe1
     isGroup: 0
     parentIndex: -1
-    spriteID: 9141341b31e94e8498c8b8e95c0e6136
+    spriteID: 39e5fcc24ec91754eae2e2d4dfd3ae64
     layerID: 5
     mosaicPosition: {x: 1355, y: 4}
     flatten: 0
@@ -381,7 +381,7 @@ ScriptedImporter:
     spriteName: Peito
     isGroup: 0
     parentIndex: -1
-    spriteID: 00450f53997c6f546b83c3a2117f8d30
+    spriteID: 160438572e649db4483546d658b83bdf
     layerID: 4
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
@@ -391,7 +391,7 @@ ScriptedImporter:
     spriteName: ps2
     isGroup: 0
     parentIndex: -1
-    spriteID: 5435604bdfaf3c74ab4162f69b5381d2
+    spriteID: c5c82b0ff8aca8a4cb73ef95be9427bf
     layerID: 3
     mosaicPosition: {x: 721, y: 1116}
     flatten: 0
@@ -401,7 +401,7 @@ ScriptedImporter:
     spriteName: "bra\xE7o2"
     isGroup: 0
     parentIndex: -1
-    spriteID: bfd8d5b2dabbc9943a505503caebb63d
+    spriteID: f9d653c58b92a40478881ceba1888358
     layerID: 2
     mosaicPosition: {x: 4, y: 1116}
     flatten: 0

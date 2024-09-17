@@ -7,7 +7,7 @@ ScriptedImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-  script: {instanceID: 0}
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -105,7 +105,7 @@ ScriptedImporter:
       y: 359
       width: 287
       height: 363
-    spriteID: 7ca1e4980646dc54b8f37b6ef2ea0616
+    spriteID: e8db8368682c89b4f99724dc43b5a450
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -126,7 +126,7 @@ ScriptedImporter:
       y: 4
       width: 528
       height: 1192
-    spriteID: 39bd04ab5f75a554db2a73417ccf4f76
+    spriteID: 2b1877d7f3a018b40b0148a0b93dbf2d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -147,7 +147,7 @@ ScriptedImporter:
       y: 4
       width: 307
       height: 347
-    spriteID: 576298b5173cc834b8ee882c26028a34
+    spriteID: bd61bf111d076584d8d90b2c7caba134
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -168,7 +168,7 @@ ScriptedImporter:
       y: 1204
       width: 375
       height: 550
-    spriteID: 0b34fea8a5bb8964f9397317c9dc1aeb
+    spriteID: dfd0eb547cc2a90488cf7802a33633f1
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -216,7 +216,7 @@ ScriptedImporter:
     spriteName: "bra\xE7o1"
     isGroup: 0
     parentIndex: -1
-    spriteID: 7ca1e4980646dc54b8f37b6ef2ea0616
+    spriteID: e8db8368682c89b4f99724dc43b5a450
     layerID: 31
     mosaicPosition: {x: 540, y: 359}
     flatten: 0
@@ -226,7 +226,7 @@ ScriptedImporter:
     spriteName: Corpo
     isGroup: 0
     parentIndex: -1
-    spriteID: 39bd04ab5f75a554db2a73417ccf4f76
+    spriteID: 2b1877d7f3a018b40b0148a0b93dbf2d
     layerID: 26
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
@@ -236,7 +236,7 @@ ScriptedImporter:
     spriteName: "bra\xE7o2"
     isGroup: 0
     parentIndex: -1
-    spriteID: 576298b5173cc834b8ee882c26028a34
+    spriteID: bd61bf111d076584d8d90b2c7caba134
     layerID: 14
     mosaicPosition: {x: 540, y: 4}
     flatten: 0
@@ -246,7 +246,7 @@ ScriptedImporter:
     spriteName: "cabe\xE7a"
     isGroup: 0
     parentIndex: -1
-    spriteID: 0b34fea8a5bb8964f9397317c9dc1aeb
+    spriteID: dfd0eb547cc2a90488cf7802a33633f1
     layerID: 9
     mosaicPosition: {x: 4, y: 1204}
     flatten: 0
