@@ -6,6 +6,7 @@ using DG.Tweening;
 public class MenuController : MonoBehaviour
 {
     public List<Transform> menu1 = new List<Transform>();
+    public List<Transform> menu2 = new List<Transform>();
 
     private void Start()
     {
@@ -13,7 +14,11 @@ public class MenuController : MonoBehaviour
         {
             menu1[i].localScale = new Vector2(0, 0);
         }
-       
+        for (int i = 0; i < menu2.Count; i++)
+        {
+            menu2[i].localScale = new Vector2(0, 0);
+
+        }
         StartCoroutine(TimeONMenu());
     }
 
@@ -28,6 +33,8 @@ public class MenuController : MonoBehaviour
     {
         Application.Quit();
     }
+
+
     IEnumerator TimeONMenu()
     {
         for (int i = 0; i < menu1.Count; i++)
@@ -37,36 +44,14 @@ public class MenuController : MonoBehaviour
             menu1[i].DOScale(1f, .25f);
         }
 
-        
+        for (int i = 0; i < menu2.Count; i++)
+        {
+            menu2[i].DOScale(1.5f, .25f);
+            yield return new WaitForSeconds(.25f);
+            menu2[i].DOScale(1f, .25f);
+        }
     }
 }
 
-public class MenuPrincipalManager : MonoBehaviour
-{
-    private string Jogo;
-    private GameObject painelOpcoes;
-    private GameObject painelMenuInicial;
-
-    public void jogar()
-    {
-        SceneManager.LoadScene(Jogo);
-
-
-
-    }
-    public void AbrirOptions()
-    {
-        painelMenuInicial.SetActive(false);
-        painelOpcoes.SetActive(true);
-
-    }
-    public void FecharOptions()
-    {
-        painelOpcoes.SetActive(false);
-        painelMenuInicial.SetActive(true);
-
-    }
-
-}
 
 
