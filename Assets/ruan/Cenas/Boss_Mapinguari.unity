@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &395374344
 Transform:
   m_ObjectHideFlags: 0
@@ -197,7 +197,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.3254902}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -430,7 +430,7 @@ GameObject:
   - component: {fileID: 1612608902}
   m_Layer: 0
   m_Name: 1
-  m_TagString: Untagged
+  m_TagString: Chao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -555,69 +555,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 18991016948609729, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
-      propertyPath: posiLayerTras.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 18991016948609729, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
-      propertyPath: posiLayerFrete.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 18991016948609729, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
-      propertyPath: posiLayerTras.Array.data[0]
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 18991016948609729, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
-      propertyPath: posiLayerTras.Array.data[1]
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 18991016948609729, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
-      propertyPath: posiLayerTras.Array.data[2]
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 18991016948609729, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
-      propertyPath: posiLayerTras.Array.data[3]
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 18991016948609729, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
-      propertyPath: posiLayerTras.Array.data[4]
-      value: -4
-      objectReference: {fileID: 0}
-    - target: {fileID: 18991016948609729, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
-      propertyPath: posiLayerTras.Array.data[5]
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 18991016948609729, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
-      propertyPath: posiLayerFrete.Array.data[0]
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 18991016948609729, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
-      propertyPath: posiLayerFrete.Array.data[1]
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 18991016948609729, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
-      propertyPath: posiLayerFrete.Array.data[2]
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 18991016948609729, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
-      propertyPath: posiLayerFrete.Array.data[3]
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 18991016948609729, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
-      propertyPath: posiLayerFrete.Array.data[4]
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 18991016948609729, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
-      propertyPath: posiLayerFrete.Array.data[5]
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3264158431822330752, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.24
+      value: 5.83
       objectReference: {fileID: 0}
     - target: {fileID: 3264158431822330752, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.98
+      value: -2.2
       objectReference: {fileID: 0}
     - target: {fileID: 3264158431822330752, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -650,6 +594,10 @@ PrefabInstance:
     - target: {fileID: 3264158431822330752, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5122491949879997938, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8878643212114710271, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
       propertyPath: m_Name
