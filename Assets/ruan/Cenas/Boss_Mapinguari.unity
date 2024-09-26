@@ -555,6 +555,62 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 18991016948609729, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
+      propertyPath: posiLayerTras.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 18991016948609729, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
+      propertyPath: posiLayerFrete.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 18991016948609729, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
+      propertyPath: posiLayerTras.Array.data[0]
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 18991016948609729, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
+      propertyPath: posiLayerTras.Array.data[1]
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 18991016948609729, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
+      propertyPath: posiLayerTras.Array.data[2]
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 18991016948609729, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
+      propertyPath: posiLayerTras.Array.data[3]
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 18991016948609729, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
+      propertyPath: posiLayerTras.Array.data[4]
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 18991016948609729, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
+      propertyPath: posiLayerTras.Array.data[5]
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 18991016948609729, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
+      propertyPath: posiLayerFrete.Array.data[0]
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 18991016948609729, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
+      propertyPath: posiLayerFrete.Array.data[1]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 18991016948609729, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
+      propertyPath: posiLayerFrete.Array.data[2]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 18991016948609729, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
+      propertyPath: posiLayerFrete.Array.data[3]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 18991016948609729, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
+      propertyPath: posiLayerFrete.Array.data[4]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 18991016948609729, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
+      propertyPath: posiLayerFrete.Array.data[5]
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3264158431822330752, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.24
