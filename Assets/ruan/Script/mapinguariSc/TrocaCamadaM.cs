@@ -28,4 +28,9 @@ public class TrocaCamadaM : MonoBehaviour
     {
         ScMapinguari.ataqueUm();
     }
+
+    public void introTerminada()
+    {
+        ScMapinguari.introJaExecutada = true;
+    }
 }

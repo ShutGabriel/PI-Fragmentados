@@ -62,6 +62,8 @@ public class ScMapinguari : MonoBehaviour
             AtivarAnimaAtaque1();
         }
 
+        controlesAtaque();
+
     }
 
     public void ControleSprite()
@@ -150,19 +152,26 @@ public class ScMapinguari : MonoBehaviour
     {
         if (introJaExecutada == true)
         {
-            NextAtqTime -= Time.deltaTime;
+            
+                NextAtqTime -= Time.deltaTime;
+            
 
             if (NextAtqTime <= 0)
             {
-                if (Hp > hpMax / 2)
+                if (Hp <= hpMax / 2)
                 {
                     qualAtaque = Random.Range(0,2);
                     quantAtaques = Random.Range(2, 4);
+                    TempoMaxAtq = Random.Range(2,5);
+                    NextAtqTime = TempoMaxAtq;
                 }
                 else
                 {
                     qualAtaque = 0;
                     quantAtaques = Random.Range(2, 4);
+                    TempoMaxAtq = Random.Range(2, 5);
+                    NextAtqTime = TempoMaxAtq;
+
 
                 }
             }
