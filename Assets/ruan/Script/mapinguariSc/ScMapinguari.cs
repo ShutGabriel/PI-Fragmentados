@@ -1,5 +1,7 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ScMapinguari : MonoBehaviour
@@ -16,6 +18,9 @@ public class ScMapinguari : MonoBehaviour
     public Animator _animator;
     public bool trocarPosi;
     public bool introJaExecutada;
+    public bool PosiJaSet;
+    public float[] posiArvore;
+    public float UltimaPosiX;
 
     [Header("controle de ataque")]
     public float NextAtqTime;
@@ -29,6 +34,7 @@ public class ScMapinguari : MonoBehaviour
 
     [Header("controle de componentes")]
     public Rigidbody2D rb;
+    public BoxCollider2D[] boxCollider;
 
     [Header("controleAtaque1")]
     public float jumpPower;
@@ -55,12 +61,14 @@ public class ScMapinguari : MonoBehaviour
         {
             AtivarAnimaAtaque1();
         }
+
     }
 
     public void ControleSprite()
     {
         _animator.SetBool("trocarPosi", trocarPosi);
         _animator.SetBool("Chao",pulando);
+
         if (trocarLayer == false)
         {
             for (int i = 0; i < partesCorpo.Length; i++) 
@@ -72,6 +80,25 @@ public class ScMapinguari : MonoBehaviour
             {
                 Boca[i].sortingOrder = posiLayerFrete[6];
             }
+
+            if (transform.position.x > 0)
+            {
+                if (PosiJaSet == true)
+                {
+                    UltimaPosiX = transform.position.x;
+                    transform.position = new Vector2(UltimaPosiX, transform.position.y);
+                    PosiJaSet = false;
+                }
+            }
+
+            rb.gravityScale = 2.0f;
+            for (int i = 0;i < boxCollider.Length; i++)
+            {
+                boxCollider[i].enabled = true;
+            }
+
+
+
         }
         else
         {
@@ -84,12 +111,40 @@ public class ScMapinguari : MonoBehaviour
             {
                 Boca[i].sortingOrder = posiLayerTras[6];
             }
+
+            if (transform.position.x > 0)
+            {
+                if (PosiJaSet == false)
+                {
+                    UltimaPosiX = transform.position.x;
+                    transform.position = new Vector2(posiArvore[0],transform.position.y);
+                    transform.localScale = new Vector3(0.4f, 0.4f, 0);
+                    PosiJaSet = true;
+                }
+            }
+            else
+            {
+                if (PosiJaSet == false)
+                {
+                    UltimaPosiX = transform.position.x;
+                    transform.position = new Vector2(posiArvore[1], transform.position.y);
+                    transform.localScale = new Vector3(-0.4f, 0.4f,0);
+                    PosiJaSet = true;
+                   
+                }
+
+            }
+            rb.gravityScale = 0f;
+            for (int i = 0; i < boxCollider.Length; i++)
+            {
+                boxCollider[i].enabled = false;
+            }
+
         }
 
-       
+
 
     }
-
 
     public void controlesAtaque()
     {
@@ -128,9 +183,17 @@ public class ScMapinguari : MonoBehaviour
             if (pulando == false)
             {
                 Vector2 jumpVelocity = new Vector2(0, jumpPower);
-                Vector2 jumpFrent = new Vector2(-jumpPower/2,0);
+                Vector2 jumpFrent = new Vector2( -jumpPower/2,0);               
                 rb.AddForce(jumpVelocity, ForceMode2D.Impulse);
-                rb.AddForce(jumpFrent, ForceMode2D.Impulse);
+
+                if (transform.localScale.x > 0)
+                {
+                    rb.AddForce(jumpFrent, ForceMode2D.Impulse);
+                }
+                else
+                {
+                    rb.AddForce(-jumpFrent, ForceMode2D.Impulse);
+                }
 
                 pulando = true;
             }
@@ -144,5 +207,26 @@ public class ScMapinguari : MonoBehaviour
         {
             pulando = false;
         }
-    }  
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Bloqueio")
+        {
+            Vector2 jumpVelocity = new Vector2(0, jumpPower/1.5f);
+            Vector2 jumpFrent = new Vector2(-jumpPower / 2.5f, 0);
+            rb.AddForce(jumpVelocity, ForceMode2D.Impulse);
+
+            if (transform.localScale.x > 0)
+            {
+                rb.AddForce(-jumpFrent, ForceMode2D.Impulse);
+            }
+            else
+            {
+                rb.AddForce(jumpFrent, ForceMode2D.Impulse);
+            }
+            transform.localScale = new Vector3(-transform.localScale.x,transform.localScale.y,transform.localScale.z);
+
+        }
+    }
 }
