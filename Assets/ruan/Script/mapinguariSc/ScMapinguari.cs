@@ -40,6 +40,10 @@ public class ScMapinguari : MonoBehaviour
     public float jumpPower;
     public bool pulando;
 
+
+    [Header("test tiro")]
+    public bool testBool;
+    public float qauntVezes;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -60,10 +64,10 @@ public class ScMapinguari : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.K))
         {
             AtivarAnimaAtaque1();
+            testBool = true;
         }
 
-        controlesAtaque();
-
+        controlesAtaque();      //test();
     }
 
     public void ControleSprite()
@@ -152,9 +156,7 @@ public class ScMapinguari : MonoBehaviour
     {
         if (introJaExecutada == true)
         {
-            
-                NextAtqTime -= Time.deltaTime;
-            
+            NextAtqTime -= Time.deltaTime;            
 
             if (NextAtqTime <= 0)
             {
@@ -236,6 +238,23 @@ public class ScMapinguari : MonoBehaviour
             }
             transform.localScale = new Vector3(-transform.localScale.x,transform.localScale.y,transform.localScale.z);
 
+        }
+    }
+
+    public void test()
+    {
+        if (testBool == true)
+        {
+            if (qauntVezes < 3)
+            {
+                print("tiro");
+                qauntVezes++;
+            }
+            else
+            {
+                testBool = false;
+                qauntVezes = 0;
+            }
         }
     }
 }
