@@ -27,6 +27,8 @@ public class ScMapinguari : MonoBehaviour
     public float TempoMaxAtq;
     public int qualAtaque;
     public int quantAtaques;
+    public bool ataqueExecutado;
+    public float tempoEntreAtaques;
 
     [Header("controleStatus")]
     public int hpMax;
@@ -156,29 +158,62 @@ public class ScMapinguari : MonoBehaviour
     {
         if (introJaExecutada == true)
         {
-            NextAtqTime -= Time.deltaTime;            
+            if (ataqueExecutado == false)
+            {
+                NextAtqTime -= Time.deltaTime;   
+            }
 
             if (NextAtqTime <= 0)
             {
                 if (Hp <= hpMax / 2)
                 {
                     qualAtaque = Random.Range(0,2);
-                    quantAtaques = Random.Range(2, 4);
-                    TempoMaxAtq = Random.Range(2,5);
+                    quantAtaques = Random.Range(5, 10);
+                    TempoMaxAtq = Random.Range(3,7);
                     NextAtqTime = TempoMaxAtq;
                 }
                 else
                 {
                     qualAtaque = 0;
                     quantAtaques = Random.Range(2, 4);
-                    TempoMaxAtq = Random.Range(2, 5);
+                    TempoMaxAtq = Random.Range(4, 8);
                     NextAtqTime = TempoMaxAtq;
-
-
                 }
+
+                ataqueExecutado = true;
             }
 
         }
+
+        if (ataqueExecutado == true)
+        {
+            if (quantAtaques > 0)
+            {
+                tempoEntreAtaques -= Time.deltaTime;
+
+                if (tempoEntreAtaques <= 0)
+                {
+                    _animator.SetTrigger("ataque");                   
+                }
+            }
+            else
+            {
+                ataqueExecutado = false;
+            }
+           
+        }
+
+        if (qualAtaque == 1)
+        {
+            _animator.SetBool("trocarPosi",true);
+        }
+        else
+        {
+            _animator.SetBool("trocarPosi", false);
+        }
+
+
+
 
     }
 
@@ -208,7 +243,7 @@ public class ScMapinguari : MonoBehaviour
 
                 pulando = true;
             }
-            
+
         }
     }
 
@@ -241,20 +276,9 @@ public class ScMapinguari : MonoBehaviour
         }
     }
 
-    public void test()
+   public void finalAtaque()
     {
-        if (testBool == true)
-        {
-            if (qauntVezes < 3)
-            {
-                print("tiro");
-                qauntVezes++;
-            }
-            else
-            {
-                testBool = false;
-                qauntVezes = 0;
-            }
-        }
+        tempoEntreAtaques = 1;
+        quantAtaques--;
     }
 }
