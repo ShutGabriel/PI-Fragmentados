@@ -247,9 +247,22 @@ public class ScMapinguari : MonoBehaviour
         }
     }
 
+    public void Dano()
+    {
+        Hp--;
+    }
+
+    public void Derrota()
+    {
+        if (Hp <= 0)
+        {
+            print("morreu");
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Chao"))
+        if (collision.gameObject.CompareTag("ground"))
         {
             pulando = false;
         }
@@ -273,6 +286,11 @@ public class ScMapinguari : MonoBehaviour
             }
             transform.localScale = new Vector3(-transform.localScale.x,transform.localScale.y,transform.localScale.z);
 
+        }
+        
+        if (collision.gameObject.tag == "tiro")
+        {
+            Dano();
         }
     }
 

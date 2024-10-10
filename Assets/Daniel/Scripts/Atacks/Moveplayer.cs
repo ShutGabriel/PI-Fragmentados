@@ -37,59 +37,21 @@ public class Moveplayer : MonoBehaviour
 
         _rb.velocity = new Vector2(_move.x * _speed, _rb.velocity.y);
 
-
-
-
-       
-
-
         if (_move.x > 0 && _facingRight == true)
         {
             flip();
-
-
-
         }
         else if (_move.x < 0 && _facingRight == false)
         {
             flip();
-
-
-
         }
 
         animControl();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
-
-
-
-
 
     public void SetMove(InputAction.CallbackContext value)
     {
-
-
         _move = value.ReadValue<Vector2>();
-
-
-
-
     }
 
     void flip()
@@ -99,8 +61,6 @@ public class Moveplayer : MonoBehaviour
         x *= -1;
 
         transform.localScale = new Vector2(x, transform.localScale.y);
-
-
     }
 
 
@@ -109,15 +69,8 @@ public class Moveplayer : MonoBehaviour
 
         if (collision.gameObject.CompareTag("ground"))
         {
-
             Debug.Log("touched the ground");
-
             _checkground = true;
-
-
-
-
-
         }
 
 
@@ -126,50 +79,32 @@ public class Moveplayer : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-
         if (collision.gameObject.CompareTag("ground"))
         {
-
             Debug.Log("left the ground");
-
             _checkground = false;
         }
-
-
-
     }
-
-
-
-
-
-
 
     public void SetJump(InputAction.CallbackContext value)
     {
-
-
         if (_checkground == true)
         {
             _rb.velocity = new Vector2(_rb.velocity.x, 0);
             _rb.AddForce(Vector2.up * _forceJump, ForceMode2D.Impulse);
             _animator.SetTrigger("Jump");
         }
-
     }
 
 
     public void shoot()
     {
-
-
         _animator.SetBool("ataqueBool", true);
         Invoke("Shootfalse", 0.5f);
     }
 
     public void bullet()
     {
-
         Debug.Log("0");
         GameObject bala = BalaPool.SharedInstance.GetPooledObject();
         if (bala != null)
@@ -183,15 +118,8 @@ public class Moveplayer : MonoBehaviour
         else
         {
 
-
-
-
         }
-
-
-
         //Instantiate(bala, bulletPoint.position, bala.transform.rotation);
-
 
     }
 
@@ -200,10 +128,7 @@ public class Moveplayer : MonoBehaviour
 
     public void Shootfalse()
     {
-
-        _animator.SetBool("ataqueBool", false);
-
-
+        _animator.SetBool("ataqueBool", false);        
     }
 
 
@@ -211,11 +136,7 @@ public class Moveplayer : MonoBehaviour
     {
         if (_move.x != 0)
         {
-
             _animator.SetBool("Walk", true);
-
-
-
 
         }
 
@@ -223,17 +144,9 @@ public class Moveplayer : MonoBehaviour
         {
 
             _animator.SetBool("Walk", false);
-
         }
-
         _animator.SetInteger("speedYint", (int)_rb.velocity.y);
         _animator.SetFloat("speedY", _rb.velocity.y);
         _animator.SetBool("noChao", _checkground);
-
-
-
     }
-
-
-
 }
