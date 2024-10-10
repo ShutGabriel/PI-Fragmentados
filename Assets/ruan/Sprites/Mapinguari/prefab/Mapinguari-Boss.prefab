@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3641776411758628633}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bocas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 4191371296314214798}
   - component: {fileID: 8937416688364019432}
   - component: {fileID: 1483685023574442834}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BocaFechada
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 2240210967890194740}
   - component: {fileID: 5653892217335686343}
   - component: {fileID: 3327859423832779840}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Peito
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,7 +255,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4637218820893020188}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Limb - pe 2_Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -286,7 +286,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7582095352279022503}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bone_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 6544687249536202134}
   - component: {fileID: 1633104971621823890}
   - component: {fileID: 101337592712880441}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Aberta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -425,7 +425,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3085601623636361718}
   - component: {fileID: 5963916559639703613}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Limb - mao 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -488,7 +488,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 185413303682281652}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Effector-Pe 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -520,7 +520,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8691982150060229742}
   - component: {fileID: 447794079180816702}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ChackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -597,7 +597,7 @@ GameObject:
   m_Component:
   - component: {fileID: 817766597147781119}
   - component: {fileID: 3726388702023488592}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Limb - mao 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -660,7 +660,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7314513790118928761}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bone_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -692,7 +692,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7368780189944722685}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Effector-mao 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -723,7 +723,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 28523712460354117}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Effector-Pe 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -754,7 +754,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7071102010740939792}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bone_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -785,7 +785,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7389912896325922029}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -820,7 +820,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1154051079907187562}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bone_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -855,7 +855,7 @@ GameObject:
   - component: {fileID: 5647942620557078948}
   - component: {fileID: 6066253798113832526}
   - component: {fileID: 1584770580096027105}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Bra\xE7o1"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -960,7 +960,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6524909726194101053}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Artes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -999,7 +999,7 @@ GameObject:
   - component: {fileID: 5576571675536162820}
   - component: {fileID: 5915132296114297310}
   - component: {fileID: 3436859861094799893}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pe1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1105,7 +1105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8704239905778157250}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Limb - pe 1_Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1136,7 +1136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7314692519134122576}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bone_13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1167,7 +1167,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1981976191961136029}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Limbs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1202,7 +1202,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1691154701457762954}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Effector-mao 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1233,7 +1233,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8321778026617711252}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1268,7 +1268,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1315869786474920783}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Limb - mao 2_Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1299,7 +1299,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8485151454116766804}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Limb - mao 1_Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1330,7 +1330,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5587607805801480529}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bone_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1362,7 +1362,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8652689619451288016}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bone_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1396,7 +1396,7 @@ GameObject:
   - component: {fileID: 4931063439852036961}
   - component: {fileID: 3642304150761392987}
   - component: {fileID: 6356145479425294025}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ps2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1501,7 +1501,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8190283491338244112}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bone_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1535,7 +1535,7 @@ GameObject:
   - component: {fileID: 3766731998949632904}
   - component: {fileID: 1067442954634011827}
   - component: {fileID: 5821812376691280622}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: olho
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1638,7 +1638,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7571486363926760993}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bone_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1672,7 +1672,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5596677230223612268}
   - component: {fileID: 4496675328462071033}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Limb - pe 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1736,7 +1736,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1928412535548730270}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bone_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1769,7 +1769,7 @@ GameObject:
   - component: {fileID: 808082606300076755}
   - component: {fileID: 8584102991213512085}
   - component: {fileID: 1174564786047668375}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Limbs-Bones
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1839,7 +1839,7 @@ GameObject:
   - component: {fileID: 6401245629023268592}
   - component: {fileID: 3337902801982191590}
   - component: {fileID: 281463981625719929}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "bra\xE7o2"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1944,7 +1944,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2566794158388157213}
   - component: {fileID: 969098255236337814}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Limb - pe 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2010,7 +2010,7 @@ GameObject:
   - component: {fileID: 7103802563913053638}
   - component: {fileID: 4167615281749715281}
   - component: {fileID: 9074208676788286429}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: boca sorindo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2114,7 +2114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1133466249888402080}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bone_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2150,7 +2150,7 @@ GameObject:
   - component: {fileID: 2256572795335751752}
   - component: {fileID: 5122491949879997938}
   - component: {fileID: 18991016948609729}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mapinguari-Boss
   m_TagString: Inimigo
   m_Icon: {fileID: 0}
@@ -2211,7 +2211,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 8878643212114710271}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 86c6bf72984f1b24eba67e1be1820d70, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
