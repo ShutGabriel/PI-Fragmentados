@@ -4,6 +4,7 @@ using UnityEngine;
 using Unity.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class MenuPrincipalManager : MonoBehaviour
 {
@@ -11,23 +12,35 @@ public class MenuPrincipalManager : MonoBehaviour
     GameObject BT_Play;
 
     [SerializeField]
-    private Text MensagemTexto;
-
-    [SerializeField]
     private Slider BarraProgresso;
 
+    [SerializeField]
+    private TextMeshProUGUI mensagemTexto;
+
+    private void Start()
+    {
+
+        this.BT_Play.SetActive(true);
+        this.BarraProgresso.gameObject.SetActive(false);
+       
+    }
 
     public void jogar()
     {
-        CarregarCena();
+        this.BT_Play.SetActive(false);
+        this.BarraProgresso.gameObject.SetActive(true);
+        this.mensagemTexto.text = "carregando...";
+        
+        StartCoroutine(CarregarCena());
 
     }
-    private void CarregarCena()
+    private IEnumerator CarregarCena()
     {
         AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("Jogo");
         while (!asyncOperation.isDone)
         {
-            Debug.Log("Carregamento: " + asyncOperation.progress + "%");
+            this.BarraProgresso.value = asyncOperation.progress;
+            yield return null;
         }
     }
 }
