@@ -47,8 +47,13 @@ public class ShootAttack : MonoBehaviour
         
         if (collision.CompareTag("Inimigo"))
         { 
-        
-            Destroy(this.gameObject);
+         if (collision.gameObject.GetComponent<ScMapinguari>())
+            {
+
+                collision.gameObject.GetComponent<ScMapinguari>().Dano();
+
+            }
+            
             
         
         }

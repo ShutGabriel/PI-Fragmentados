@@ -262,7 +262,7 @@ public class ScMapinguari : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Chao"))
+        if (collision.gameObject.CompareTag("ground"))
         {
             pulando = false;
         }

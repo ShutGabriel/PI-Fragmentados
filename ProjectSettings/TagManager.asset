@@ -8,6 +8,8 @@ TagManager:
   - item
   - Chao
   - Bloqueio
+  - ground
+  - tiro
   layers:
   - Default
   - TransparentFX
