@@ -256,6 +256,7 @@ public class ScMapinguari : MonoBehaviour
     public void Dano()
     {
         Hp--;
+        gameControl.LifeInimigo();
     }
 
     public void Derrota()
@@ -263,6 +264,7 @@ public class ScMapinguari : MonoBehaviour
         if (Hp <= 0)
         {
             print("morreu");
+          
         }
     }
 
@@ -296,8 +298,9 @@ public class ScMapinguari : MonoBehaviour
         
         if (collision.gameObject.tag == "tiro")
         {
+          
             Dano();
-            gameControl.LifeInimigo();
+          
         }
     }
 

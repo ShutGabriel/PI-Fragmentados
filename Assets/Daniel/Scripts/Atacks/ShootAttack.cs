@@ -8,7 +8,7 @@ public class ShootAttack : MonoBehaviour
     [SerializeField] float _speed;
     [SerializeField] Rigidbody2D _rb;
     [SerializeField] float timetodie;
-    control Player;
+    public control Player;
     public Animator animator;
     public bool shootanim;
     public bool timerativado;
@@ -52,6 +52,7 @@ public class ShootAttack : MonoBehaviour
 
     public void speedactivate()
     {
+        Player = Camera.main.GetComponent<control>();
         if (Player._player.transform.localScale.x > 0)
         {
             _rb.velocity = new Vector2(_speed, 0);
