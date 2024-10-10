@@ -14,8 +14,8 @@ public class Moveplayer : MonoBehaviour
     public GameObject bala;
     public Transform bulletPoint;
     public Transform bulletPointCima;
-
-
+    private bool _canshoot = true;
+    public float shootDelay = 0.5f;
     bool _facingRight;
     public bool _checkground;
 
@@ -28,19 +28,19 @@ public class Moveplayer : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
 
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
         _rb.velocity = new Vector2(_move.x * _speed, _rb.velocity.y);
 
 
 
-        
 
+       
 
 
         if (_move.x > 0 && _facingRight == true)
@@ -48,17 +48,31 @@ public class Moveplayer : MonoBehaviour
             flip();
 
 
-            
+
         }
         else if (_move.x < 0 && _facingRight == false)
         {
             flip();
 
 
-            
+
         }
 
         animControl();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     }
@@ -67,7 +81,7 @@ public class Moveplayer : MonoBehaviour
 
 
 
-   public void SetMove(InputAction.CallbackContext value)
+    public void SetMove(InputAction.CallbackContext value)
     {
 
 
@@ -101,7 +115,7 @@ public class Moveplayer : MonoBehaviour
             _checkground = true;
 
 
-          
+
 
 
         }
@@ -126,7 +140,7 @@ public class Moveplayer : MonoBehaviour
     }
 
 
-   
+
 
 
 
@@ -147,10 +161,10 @@ public class Moveplayer : MonoBehaviour
 
     public void shoot()
     {
-       
-        
+
+
         _animator.SetBool("ataqueBool", true);
-        Invoke("Shootfalse", 1f);    
+        Invoke("Shootfalse", 0.5f);
     }
 
     public void bullet()
@@ -166,22 +180,23 @@ public class Moveplayer : MonoBehaviour
             bala.SetActive(true);
             bala.GetComponent<ShootAttack>().speedactivate();
         }
+        else
+        {
 
 
-    
+
+
+        }
+
+
+
         //Instantiate(bala, bulletPoint.position, bala.transform.rotation);
 
 
     }
 
 
-    public void timeShoot()
-    {
 
-       
-
-
-    }
 
     public void Shootfalse()
     {
@@ -190,7 +205,7 @@ public class Moveplayer : MonoBehaviour
 
 
     }
-    
+
 
     public void animControl()
     {
@@ -199,7 +214,7 @@ public class Moveplayer : MonoBehaviour
 
             _animator.SetBool("Walk", true);
 
-            
+
 
 
         }
@@ -215,15 +230,10 @@ public class Moveplayer : MonoBehaviour
         _animator.SetFloat("speedY", _rb.velocity.y);
         _animator.SetBool("noChao", _checkground);
 
-        
+
 
     }
-
-    
-
 
 
 
 }
-
-
