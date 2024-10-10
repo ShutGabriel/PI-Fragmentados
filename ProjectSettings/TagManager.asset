@@ -10,6 +10,7 @@ TagManager:
   - Bloqueio
   - ground
   - tiro
+  - Inimigo
   layers:
   - Default
   - TransparentFX
