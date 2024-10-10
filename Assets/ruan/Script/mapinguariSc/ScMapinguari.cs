@@ -46,10 +46,16 @@ public class ScMapinguari : MonoBehaviour
     [Header("test tiro")]
     public bool testBool;
     public float qauntVezes;
+    GameControl gameControl;
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         Hp = hpMax;
+
+        gameControl = Camera.main.GetComponent<GameControl>();
+
 
     }
 
@@ -291,6 +297,7 @@ public class ScMapinguari : MonoBehaviour
         if (collision.gameObject.tag == "tiro")
         {
             Dano();
+            gameControl.LifeInimigo();
         }
     }
 
