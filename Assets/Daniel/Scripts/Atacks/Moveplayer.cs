@@ -12,6 +12,7 @@ public class Moveplayer : MonoBehaviour
     [SerializeField] Vector2 _move;
     [SerializeField] float _forceJump;
     public GameObject bala;
+    public GameObject shotgunbullet;
     public Transform bulletPoint;
     public Transform bulletPointCima;
     private bool _canshoot = true;
@@ -149,4 +150,17 @@ public class Moveplayer : MonoBehaviour
         _animator.SetFloat("speedY", _rb.velocity.y);
         _animator.SetBool("noChao", _checkground);
     }
+
+    public void shotgunblast()
+    {
+
+
+
+        Instantiate(shotgunbullet, bulletPoint.position, shotgunbullet.transform.rotation);
+
+
+
+    }
+
+
 }
