@@ -10,7 +10,8 @@ public class MenuPrincipalManager : MonoBehaviour
 {
     [SerializeField]
     GameObject BT_Play;
-
+    GameObject Bt_Options;
+    GameObject BT_Quit;
     [SerializeField]
     private Slider BarraProgresso;
 
@@ -22,7 +23,8 @@ public class MenuPrincipalManager : MonoBehaviour
 
         this.BT_Play.SetActive(true);
         this.BarraProgresso.gameObject.SetActive(false);
-       
+        this.mensagemTexto.gameObject.SetActive(false);
+
     }
 
     public void jogar()
@@ -36,11 +38,14 @@ public class MenuPrincipalManager : MonoBehaviour
     }
     private IEnumerator CarregarCena()
     {
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("Jogo");
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("Bagulho");
         while (!asyncOperation.isDone)
         {
             this.BarraProgresso.value = asyncOperation.progress;
             yield return null;
         }
+
+
+
     }
 }
