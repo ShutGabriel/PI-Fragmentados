@@ -104,6 +104,12 @@ public class Moveplayer : MonoBehaviour
         Invoke("Shootfalse", 0.5f);
     }
 
+    public void shotgozo()
+    {
+        _animator.SetBool("ataqueBool", true);
+        Invoke("shotgunblast", 0.5f);
+    }
+
     public void bullet()
     {
         Debug.Log("0");
@@ -156,8 +162,9 @@ public class Moveplayer : MonoBehaviour
 
 
 
-        Instantiate(shotgunbullet, bulletPoint.position, shotgunbullet.transform.rotation);
+        GameObject bala = Instantiate(shotgunbullet, bulletPoint.position, shotgunbullet.transform.rotation);
 
+        bala.GetComponent<Capsulescript>().direction = transform.localScale.x;
 
 
     }
