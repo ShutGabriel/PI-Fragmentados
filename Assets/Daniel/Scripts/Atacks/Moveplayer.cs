@@ -114,7 +114,7 @@ public class Moveplayer : MonoBehaviour
             bala.transform.position = bulletPoint.position;
             bala.GetComponent<ShootAttack>().timerativado = true;
             bala.SetActive(true);
-            bala.GetComponent<ShootAttack>().speedactivate();
+            bala.GetComponent<ShootAttack>().direcao = transform.localScale.x;
         }
         else
         {

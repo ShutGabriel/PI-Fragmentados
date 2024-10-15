@@ -12,13 +12,14 @@ public class ShootAttack : MonoBehaviour
     public Animator animator;
     public bool shootanim;
     public bool timerativado;
+    public float direcao;
 
 
     // Start is called before the first frame update
     void Start()
     {
         Player = Camera.main.GetComponent<control>();
-        speedactivate();
+       // speedactivate();
     }
 
     // Update is called once per frame
@@ -29,6 +30,15 @@ public class ShootAttack : MonoBehaviour
             Invoke("desativarbala",5);
             timerativado = false;
         }
+        if (direcao > 0)
+        {
+            _rb.transform.Translate(_speed * Time.deltaTime, 0, 0);
+        }
+        else
+        {
+            _rb.transform.Translate(-_speed * Time.deltaTime, 0, 0);
+        }
+
     }
 
 
@@ -55,11 +65,14 @@ public class ShootAttack : MonoBehaviour
         Player = Camera.main.GetComponent<control>();
         if (Player._player.transform.localScale.x > 0)
         {
-            _rb.velocity = new Vector2(_speed, 0);
+            //_rb.velocity = Vector2.right * _speed * Time.deltaTime;
+            _rb.transform.Translate(_speed * Time.deltaTime,0,0);
         }
         else
         {
-            _rb.velocity = new Vector2(-_speed, 0);
+            // _rb.velocity = -Vector2.right * _speed * Time.deltaTime;
+            _rb.transform.Translate(-_speed * Time.deltaTime, 0, 0);
+
         }
     }
 
