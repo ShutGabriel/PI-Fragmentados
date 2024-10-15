@@ -38,4 +38,9 @@ public class TrocaCamadaM : MonoBehaviour
     {
         ScMapinguari.finalAtaque();
     }
+
+    public void AtivarAreaAtaque()
+    {
+        ScMapinguari.areaAtaque.SetActive(true);
+    }
 }

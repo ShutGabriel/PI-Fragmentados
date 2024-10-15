@@ -914,6 +914,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Player1 '
       objectReference: {fileID: 0}
+    - target: {fileID: 668196280561369135, guid: e242e83cf50f2fa449b08c4c35ef791e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1659761721980770613, guid: e242e83cf50f2fa449b08c4c35ef791e, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.0000008046627
@@ -3207,10 +3211,6 @@ PrefabInstance:
     - target: {fileID: 8878643212114710271, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
       propertyPath: m_Name
       value: Mapinguari-Boss
-      objectReference: {fileID: 0}
-    - target: {fileID: 8878643212114710271, guid: 1df90b399df4cb648b248e71a6b4bd2c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

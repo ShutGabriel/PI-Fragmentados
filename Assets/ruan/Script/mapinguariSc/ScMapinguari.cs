@@ -29,6 +29,7 @@ public class ScMapinguari : MonoBehaviour
     public int quantAtaques;
     public bool ataqueExecutado;
     public float tempoEntreAtaques;
+    public GameObject areaAtaque;
 
     [Header("controleStatus")]
     public int hpMax;
@@ -259,6 +260,7 @@ public class ScMapinguari : MonoBehaviour
         gameControl.LifeInimigo();
     }
 
+    
     public void Derrota()
     {
         if (Hp <= 0)
@@ -308,5 +310,9 @@ public class ScMapinguari : MonoBehaviour
     {
         tempoEntreAtaques = 1;
         quantAtaques--;
+        if (qualAtaque == 0)
+        {
+            areaAtaque.SetActive(true);
+        }
     }
 }
