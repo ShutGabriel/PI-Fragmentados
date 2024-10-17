@@ -5,10 +5,11 @@ using UnityEngine;
 public class AreaDanoMapinguari : MonoBehaviour
 {
     public bool DanoAplicado;
+    GameControl gameControl;
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameControl= Camera.main.GetComponent<GameControl>();
     }
 
     // Update is called once per frame
@@ -23,8 +24,8 @@ public class AreaDanoMapinguari : MonoBehaviour
         {
             if (DanoAplicado == false)
             {
-                print("DanoPlayer");
-                DanoAplicado = true;
+                gameControl.LifePlayer();
+                   DanoAplicado = true;
             }
         }
     }
