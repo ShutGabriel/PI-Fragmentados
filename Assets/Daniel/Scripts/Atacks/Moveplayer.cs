@@ -70,7 +70,6 @@ public class Moveplayer : MonoBehaviour
 
         if (collision.gameObject.CompareTag("ground"))
         {
-            Debug.Log("touched the ground");
             _checkground = true;
         }
 
@@ -82,7 +81,6 @@ public class Moveplayer : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("ground"))
         {
-            Debug.Log("left the ground");
             _checkground = false;
         }
     }

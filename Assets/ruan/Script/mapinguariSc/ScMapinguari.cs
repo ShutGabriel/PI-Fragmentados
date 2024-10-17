@@ -1,7 +1,6 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class ScMapinguari : MonoBehaviour
@@ -42,6 +41,8 @@ public class ScMapinguari : MonoBehaviour
     [Header("controleAtaque1")]
     public float jumpPower;
     public bool pulando;
+    public GameObject Pedra;
+    public GameObject PlayerPosi;
 
 
     [Header("test tiro")]
@@ -56,6 +57,7 @@ public class ScMapinguari : MonoBehaviour
         Hp = hpMax;
 
         gameControl = Camera.main.GetComponent<GameControl>();
+        PlayerPosi = GameObject.Find("Player1");
 
 
     }
@@ -160,7 +162,6 @@ public class ScMapinguari : MonoBehaviour
 
 
     }
-
     public void controlesAtaque()
     {
         if (introJaExecutada == true)
@@ -223,12 +224,10 @@ public class ScMapinguari : MonoBehaviour
 
 
     }
-
     public void AtivarAnimaAtaque1()
     {
         _animator.SetTrigger("ataque");
     }
-
     public void ataqueUm()
     {
         if (qualAtaque == 0)
@@ -253,14 +252,11 @@ public class ScMapinguari : MonoBehaviour
 
         }
     }
-
     public void Dano()
     {
         Hp--;
         gameControl.LifeInimigo();
-    }
-
-    
+    }    
     public void Derrota()
     {
         if (Hp <= 0)
@@ -270,6 +266,24 @@ public class ScMapinguari : MonoBehaviour
         }
     }
 
+    public void spawnPedra()
+    {
+        Instantiate(Pedra,new Vector2(PlayerPosi.transform.position.x,Pedra.transform.position.y),Quaternion.identity);
+    }
+
+    public void finalAtaque()
+    {
+        tempoEntreAtaques = 1;
+        quantAtaques--;
+        if (qualAtaque == 0)
+        {
+            areaAtaque.SetActive(true);
+        }
+        else
+        {
+            spawnPedra();
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("ground"))
@@ -306,13 +320,5 @@ public class ScMapinguari : MonoBehaviour
         }
     }
 
-   public void finalAtaque()
-    {
-        tempoEntreAtaques = 1;
-        quantAtaques--;
-        if (qualAtaque == 0)
-        {
-            areaAtaque.SetActive(true);
-        }
-    }
+   
 }

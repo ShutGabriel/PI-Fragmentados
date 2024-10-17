@@ -155,6 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e8dbbe57fd7b34e825d7178de3dd33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  danoMapinguari: {fileID: 8417610315746811003}
 --- !u!1 &790056026398338329
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,6 +877,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8141258880883054091}
   - component: {fileID: 8751778470216586252}
+  - component: {fileID: 8417610315746811003}
+  - component: {fileID: 1057055752001945822}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -950,6 +953,54 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8417610315746811003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2951638959419937711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bed60b912dbaaac4c8195cb46be6a06c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DanoAplicado: 0
+--- !u!70 &1057055752001945822
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2951638959419937711}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 11.55, y: 3.3400004}
+  m_Direction: 1
 --- !u!1 &2954625794311631727
 GameObject:
   m_ObjectHideFlags: 0
@@ -2612,5 +2663,7 @@ MonoBehaviour:
   - {fileID: 447794079180816702}
   jumpPower: 35
   pulando: 0
+  Pedra: {fileID: 4841116113486873588, guid: 9da8225439d77eb49bc12f651a7c5c6f, type: 3}
+  PlayerPosi: {fileID: 0}
   testBool: 0
   qauntVezes: 0

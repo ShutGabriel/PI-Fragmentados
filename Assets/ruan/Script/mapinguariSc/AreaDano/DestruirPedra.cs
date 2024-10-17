@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DesativarArea : MonoBehaviour
+public class DestruirPedra : MonoBehaviour
 {
-    public AreaDanoMapinguari danoMapinguari;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +16,8 @@ public class DesativarArea : MonoBehaviour
         
     }
 
-    public void desativarObj()
+    public void FinalAnima()
     {
-        this.gameObject.SetActive(false);
-        danoMapinguari.DanoAplicado = false;
+        Destroy(this.gameObject);
     }
 }
