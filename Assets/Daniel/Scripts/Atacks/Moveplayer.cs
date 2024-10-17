@@ -19,16 +19,17 @@ public class Moveplayer : MonoBehaviour
     public float shootDelay = 0.5f;
     bool _facingRight;
     public bool _checkground;
-
+    public int qualataque;
     public Animator _animator;
     public bool shootanim;
-
+    public int healthpoint;
+    public int energypoint;
 
     // Start is called before the first frame update
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
-
+        Camera.main.GetComponent<GameControl>()._Moveplayer = this;
 
     }
 
@@ -98,14 +99,32 @@ public class Moveplayer : MonoBehaviour
 
     public void shoot()
     {
+        qualataque = 0;
         _animator.SetBool("ataqueBool", true);
         Invoke("Shootfalse", 0.5f);
     }
 
     public void shotgozo()
     {
-        _animator.SetBool("ataqueBool", true);
-        Invoke("shotgunblast", 0.5f);
+        if (energypoint > 0)
+        {
+
+
+
+            qualataque = 1;
+            _animator.SetBool("ataqueBool", true);
+            Invoke("Shootfalse", 0.5f);
+            energypoint--;
+
+
+
+
+
+
+
+
+        }
+        
     }
 
     public void bullet()

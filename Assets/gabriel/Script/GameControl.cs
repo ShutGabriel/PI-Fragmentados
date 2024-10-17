@@ -18,7 +18,6 @@ public class GameControl : MonoBehaviour
     public Slider _sliderLifePlayer;
     public int _lifePlayerInicial;
     public int _lifePlayerReal;
-    public int _vidaTest;
     public Moveplayer _Moveplayer;
     // Update is called once per frame
     void Start()
@@ -27,9 +26,9 @@ public class GameControl : MonoBehaviour
         _scMapinguari.Hp = _scMapinguari.hpMax;
         _sliderLifeInimigo.value = _scMapinguari.hpMax;
 
-        _vidaTest = 50;
-        _sliderLifePlayer.maxValue = _vidaTest;
-        _sliderLifePlayer.value = _vidaTest;
+        
+        _sliderLifePlayer.maxValue = _Moveplayer.healthpoint;
+        _sliderLifePlayer.value = _Moveplayer.healthpoint;
     }
 
    public void LifeInimigo()
@@ -40,8 +39,8 @@ public class GameControl : MonoBehaviour
 
     public void LifePlayer()
     {
-        _vidaTest -= 5;
-        _sliderLifePlayer.DOValue(_vidaTest,0.5f);
+        _Moveplayer.healthpoint -= 5;
+        _sliderLifePlayer.DOValue(_Moveplayer.healthpoint,0.5f);
 
     }
 }

@@ -12,12 +12,27 @@ public class AtaqueAnim : MonoBehaviour
 
     public void shoot()
     {
-        Debug.Log("-1");
-        _moveplayer.bullet();
+
+        if (_moveplayer.qualataque == 0)
+        {
+
+            Debug.Log("-1");
+            _moveplayer.bullet();
+
+
+
+        }
+        else
+        {
+
+            _moveplayer.shotgunblast();
+            
+        }
+        
 
     }
 
-
+    
 
 
 
