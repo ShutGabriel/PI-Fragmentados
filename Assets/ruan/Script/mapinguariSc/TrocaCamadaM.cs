@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class TrocaCamadaM : MonoBehaviour
@@ -42,5 +43,27 @@ public class TrocaCamadaM : MonoBehaviour
     public void AtivarAreaAtaque()
     {
         ScMapinguari.areaAtaque.SetActive(true);
+    }
+
+    public void finalDano()
+    {
+        ScMapinguari._animaDano.SetBool("Dano",false);
+    }
+
+    public void ativarGrito()
+    {
+        ScMapinguari.mpSom.ativarSom(0);
+    }
+
+    public void somPulo()
+    {
+        ScMapinguari.mpSom.ativarSom(1);
+
+    }
+
+    public void SomimpactoChao()
+    {
+        ScMapinguari.mpSom.ativarSom(2);
+
     }
 }

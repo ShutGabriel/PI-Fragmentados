@@ -6,10 +6,13 @@ public class AreaDanoMapinguari : MonoBehaviour
 {
     public bool DanoAplicado;
     GameControl gameControl;
+   public  ScMapinguari ScMapinguari;
+
     // Start is called before the first frame update
     void Start()
     {
         gameControl= Camera.main.GetComponent<GameControl>();
+        ScMapinguari = GameObject.Find("Mapinguari-Boss").GetComponent<ScMapinguari>();
     }
 
     // Update is called once per frame
@@ -22,11 +25,18 @@ public class AreaDanoMapinguari : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            if (collision.GetComponent<Moveplayer>())
+            {
+                collision.GetComponent<Moveplayer>().Dano(ScMapinguari.DanoAtaque1);
+            }
+
+            /*
             if (DanoAplicado == false)
             {
                 gameControl.LifePlayer();
                    DanoAplicado = true;
-            }
+            }*/
+
         }
     }
 }

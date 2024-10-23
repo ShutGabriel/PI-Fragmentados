@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.UI;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using DG.Tweening;
 
 public class GameControl : MonoBehaviour
@@ -20,19 +21,29 @@ public class GameControl : MonoBehaviour
     public int _lifePlayerReal;
     public int _vidaTest;
     public Moveplayer _Moveplayer;
+
+    [Header("gameOverControle")]
+    public GameObject telaGameOver;
+
     // Update is called once per frame
     void Start()
     {
         _sliderLifeInimigo.maxValue = _scMapinguari.hpMax;
         _scMapinguari.Hp = _scMapinguari.hpMax;
         _sliderLifeInimigo.value = _scMapinguari.hpMax;
-
+        /*
         _vidaTest = 50;
         _sliderLifePlayer.maxValue = _vidaTest;
         _sliderLifePlayer.value = _vidaTest;
+        */
     }
 
-   public void LifeInimigo()
+    private void Update()
+    {
+
+    }
+
+    public void LifeInimigo()
     {
         _scMapinguari.Hp--;
         _sliderLifeInimigo.DOValue(_scMapinguari.Hp, 0.5f);
@@ -43,5 +54,15 @@ public class GameControl : MonoBehaviour
         _vidaTest -= 5;
         _sliderLifePlayer.DOValue(_vidaTest,0.5f);
 
+    }
+
+    public void GameOver()
+    {
+        telaGameOver.SetActive(true);
+    }
+
+    public void ResetGame()
+    {
+        SceneManager.LoadScene("Boss_Mapinguari");
     }
 }

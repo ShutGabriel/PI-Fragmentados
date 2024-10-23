@@ -15,6 +15,7 @@ public class ScMapinguari : MonoBehaviour
 
     [Header("controleAnimaçoes")]
     public Animator _animator;
+    public Animator _animaDano;
     public bool trocarPosi;
     public bool introJaExecutada;
     public bool PosiJaSet;
@@ -41,6 +42,7 @@ public class ScMapinguari : MonoBehaviour
     [Header("controleAtaque1")]
     public float jumpPower;
     public bool pulando;
+    public int DanoAtaque1;
     public GameObject Pedra;
     public GameObject PlayerPosi;
 
@@ -49,6 +51,7 @@ public class ScMapinguari : MonoBehaviour
     public bool testBool;
     public float qauntVezes;
     GameControl gameControl;
+    public MapinguariSom mpSom;
 
 
     void Start()
@@ -57,9 +60,8 @@ public class ScMapinguari : MonoBehaviour
         Hp = hpMax;
 
         gameControl = Camera.main.GetComponent<GameControl>();
+        mpSom = GameObject.Find("Sons").GetComponent<MapinguariSom>();
         PlayerPosi = GameObject.Find("Player1");
-
-
     }
 
     // Update is called once per frame
@@ -78,7 +80,7 @@ public class ScMapinguari : MonoBehaviour
             testBool = true;
         }
 
-        controlesAtaque();      //test();
+        controlesAtaque();     
     }
 
     public void ControleSprite()
@@ -162,6 +164,7 @@ public class ScMapinguari : MonoBehaviour
 
 
     }
+
     public void controlesAtaque()
     {
         if (introJaExecutada == true)
@@ -224,10 +227,12 @@ public class ScMapinguari : MonoBehaviour
 
 
     }
+
     public void AtivarAnimaAtaque1()
     {
         _animator.SetTrigger("ataque");
     }
+
     public void ataqueUm()
     {
         if (qualAtaque == 0)
@@ -252,11 +257,14 @@ public class ScMapinguari : MonoBehaviour
 
         }
     }
+
     public void Dano()
     {
         Hp--;
         gameControl.LifeInimigo();
-    }    
+        _animaDano.SetBool("Dano", true);
+    }
+
     public void Derrota()
     {
         if (Hp <= 0)
@@ -284,6 +292,7 @@ public class ScMapinguari : MonoBehaviour
             spawnPedra();
         }
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("ground"))
