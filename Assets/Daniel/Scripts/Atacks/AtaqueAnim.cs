@@ -11,8 +11,16 @@ public class AtaqueAnim : MonoBehaviour
     
 
     public void shoot()
-    {    
-        _moveplayer.bullet();
+    {
+        if (_moveplayer.qualTiro == 0)
+        {
+            _moveplayer.bullet();
+
+        }
+        else
+        {
+            _moveplayer.shotgunblast();
+        }
     }
 
 

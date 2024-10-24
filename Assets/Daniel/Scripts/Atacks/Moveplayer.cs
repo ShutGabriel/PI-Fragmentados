@@ -28,6 +28,8 @@ public class Moveplayer : MonoBehaviour
     public int hp;
     public Slider sliderHpPlayer;
     public GameControl gameControl;
+    public int qualTiro;
+
 
     // Start is called before the first frame update
     void Start()
@@ -109,18 +111,20 @@ public class Moveplayer : MonoBehaviour
 
     public void shoot()
     {
+        qualTiro = 0;
         _animator.SetBool("ataqueBool", true);
         Invoke("Shootfalse", 0.5f);
     }
 
     public void shotgozo()
     {
+        qualTiro = 1;
         _animator.SetBool("ataqueBool", true);
-        Invoke("shotgunblast", 0.5f);
+        Invoke("Shootfalse", 0.5f);
     }
 
     public void bullet()
-    {        
+    { /*       
         GameObject bala = BalaPool.SharedInstance.GetPooledObject();
         if (bala != null)
         {          
@@ -132,8 +136,10 @@ public class Moveplayer : MonoBehaviour
         else
         {
 
-        }
-        //Instantiate(bala, bulletPoint.position, bala.transform.rotation);
+        }*/
+        
+       GameObject tiro =  Instantiate(bala, bulletPoint.position, bala.transform.rotation);
+        tiro.GetComponent<ShootAttack>().direcao = transform.localScale.x;
 
     }
 

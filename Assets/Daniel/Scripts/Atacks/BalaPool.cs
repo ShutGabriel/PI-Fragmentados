@@ -17,14 +17,7 @@ public class BalaPool : MonoBehaviour
 
     void Start()
     {
-        pooledObjects = new List<GameObject>();
-        GameObject tmp;
-        for (int i = 0; i < amountToPool; i++)
-        {
-            tmp = Instantiate(objectToPool);
-            tmp.SetActive(false);
-            pooledObjects.Add(tmp);
-        }
+      //  gerarBala();
     }
 
     public GameObject GetPooledObject()
@@ -37,13 +30,18 @@ public class BalaPool : MonoBehaviour
             }
         }
         return null;
-
-
-
     }
 
 
-
-
-
+    public void gerarBala()
+    {
+        pooledObjects = new List<GameObject>();
+        GameObject tmp;
+        for (int i = 0; i < amountToPool; i++)
+        {
+            tmp = Instantiate(objectToPool);
+            tmp.SetActive(false);
+            pooledObjects.Add(tmp);
+        }
+    }
 }
