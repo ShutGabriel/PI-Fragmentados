@@ -65,4 +65,9 @@ public class GameControl : MonoBehaviour
     {
         SceneManager.LoadScene("Boss_Mapinguari");
     }
+
+    public void MenuLoad()
+    {
+        SceneManager.LoadScene("Gabriel-Teste");
+    }
 }

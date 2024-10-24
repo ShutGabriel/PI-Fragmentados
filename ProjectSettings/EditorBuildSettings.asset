@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/gabriel/Gabriel-Teste.unity
+    guid: b6ee4613c0c95c749bd22a994b68893c
   - enabled: 1
     path: Assets/ruan/Cenas/Boss_Mapinguari.unity
     guid: d8b711e4ba659e344bed1bf6ddada838
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
