@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.Pool;
+using Unity.VisualScripting;
 
 public class Moveplayer : MonoBehaviour
 {
@@ -26,8 +27,15 @@ public class Moveplayer : MonoBehaviour
 
     [Header("StatosPlayer")]
     public int hp;
+    public int energia;
+    public int energiaMax;
     public Slider sliderHpPlayer;
+    public Slider sliderEnergiaPlayer;
     public GameControl gameControl;
+    public int qualTiro;
+    public bool liberaTiro;
+    public GameObject btnUi;
+
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +43,10 @@ public class Moveplayer : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
         gameControl = GameObject.Find("Main Camera").GetComponent<GameControl>();
         sliderHpPlayer = GameObject.Find("SliderPlayer").GetComponent<Slider>();
+        sliderEnergiaPlayer = GameObject.Find("SliderPlayerEnergia").GetComponent<Slider>();
+        btnUi = GameObject.Find("btnImage");
         sliderHpPlayer.maxValue = hp;
+        sliderEnergiaPlayer.maxValue = energiaMax;
     }
 
     // Update is called once per frame
@@ -63,11 +74,29 @@ public class Moveplayer : MonoBehaviour
         {
             sliderHpPlayer.value = hp;
         }
+        if (sliderEnergiaPlayer != null)
+        {
+            sliderEnergiaPlayer.value = energia;
+
+        }
+
+        if (energia>= energiaMax)
+        {
+            liberaTiro = true;
+            energia = energiaMax;
+        }
+
+        if (energia <= 0)
+        {
+            liberaTiro = false;
+        }
 
         if (hp <= 0)
         {
             gameControl.GameOver();
         }
+
+        btnUi.SetActive(liberaTiro);
     }
 
     public void Dano(int dano)
@@ -109,18 +138,24 @@ public class Moveplayer : MonoBehaviour
 
     public void shoot()
     {
+        qualTiro = 0;
         _animator.SetBool("ataqueBool", true);
         Invoke("Shootfalse", 0.5f);
     }
 
     public void shotgozo()
     {
-        _animator.SetBool("ataqueBool", true);
-        Invoke("shotgunblast", 0.5f);
+        if (liberaTiro == true)
+        {
+            qualTiro = 1;
+           
+            _animator.SetBool("ataqueBool", true);
+            Invoke("Shootfalse", 0.5f);
+        }
     }
 
     public void bullet()
-    {        
+    { /*       
         GameObject bala = BalaPool.SharedInstance.GetPooledObject();
         if (bala != null)
         {          
@@ -132,9 +167,11 @@ public class Moveplayer : MonoBehaviour
         else
         {
 
-        }
-        //Instantiate(bala, bulletPoint.position, bala.transform.rotation);
-
+        }*/
+        
+       GameObject tiro =  Instantiate(bala, bulletPoint.position, bala.transform.rotation);
+        tiro.GetComponent<ShootAttack>().scPlayer = this;
+        tiro.GetComponent<ShootAttack>().direcao = transform.localScale.x;
     }
 
     public void Shootfalse()
@@ -162,6 +199,7 @@ public class Moveplayer : MonoBehaviour
     {
         GameObject bala = Instantiate(shotgunbullet, bulletPoint.position, shotgunbullet.transform.rotation);
         bala.GetComponent<Capsulescript>().direction = transform.localScale.x;
+        energia--;
 
     }
 

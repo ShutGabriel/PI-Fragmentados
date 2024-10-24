@@ -8,12 +8,13 @@ public class ShootAttack : MonoBehaviour
     [SerializeField] float _speed;
     [SerializeField] Rigidbody2D _rb;
     [SerializeField] float timetodie;
+    public Moveplayer scPlayer;
     public control Player;
     public Animator animator;
     public bool shootanim;
     public bool timerativado;
     public float direcao;
-
+    public int qualTiro;
 
     // Start is called before the first frame update
     void Start()
@@ -25,10 +26,10 @@ public class ShootAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timerativado==true)
+        if (timerativado == false)
         {
-            Invoke("desativarbala",5);
-            timerativado = false;
+            Invoke("desativarbala",3);
+            timerativado = true;
         }
         if (direcao > 0)
         {
@@ -45,11 +46,26 @@ public class ShootAttack : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {        
         if (collision.CompareTag("Inimigo"))
-        { 
-            if (collision.gameObject.GetComponent<ScMapinguari>())
+        {
+            if (qualTiro == 0)
             {
-                collision.gameObject.GetComponent<ScMapinguari>().Dano();
-                desativarbala();
+                if (collision.gameObject.GetComponent<ScMapinguari>())
+                {
+                    if (scPlayer.liberaTiro == false)
+                    {
+                        scPlayer.energia++;
+                    }
+                    collision.gameObject.GetComponent<ScMapinguari>().Dano();
+                    desativarbala();
+                }
+            }
+            else
+            {
+                if (collision.gameObject.GetComponent<ScMapinguari>())
+                {
+                    collision.gameObject.GetComponent<ScMapinguari>().Dano();
+                    desativarbala();
+                }
             }
         }
 
@@ -57,7 +73,8 @@ public class ShootAttack : MonoBehaviour
 
     public void desativarbala()
     {
-        gameObject.SetActive(false);
+        Destroy(this.gameObject);
+        //gameObject.SetActive(false);
     }
 
     public void speedactivate()
