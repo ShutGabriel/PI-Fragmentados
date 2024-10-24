@@ -59,7 +59,10 @@ public class Moveplayer : MonoBehaviour
 
     public void controleHp()
     {
-        sliderHpPlayer.value = hp;
+        if (sliderHpPlayer != null)
+        {
+            sliderHpPlayer.value = hp;
+        }
 
         if (hp <= 0)
         {

@@ -68,18 +68,6 @@ public class ScMapinguari : MonoBehaviour
     void Update()
     {
         ControleSprite();
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            trocarPosi = !trocarPosi;
-        }
-
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            AtivarAnimaAtaque1();
-            testBool = true;
-        }
-
         controlesAtaque();     
     }
 
