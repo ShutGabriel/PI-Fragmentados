@@ -9,6 +9,7 @@ using TMPro;
 public class MenuPrincipalManager : MonoBehaviour
 {
     [SerializeField]
+    public GameObject[] button; 
     GameObject BT_Play;
     GameObject Bt_Options;
     GameObject BT_Quit;
@@ -20,17 +21,25 @@ public class MenuPrincipalManager : MonoBehaviour
 
     private void Start()
     {
+        for (int i = 0; i < button.Length; i++)
+        {
+            button[i].SetActive(true);
+        }
 
-        this.BT_Play.SetActive(true);
+       
         this.BarraProgresso.gameObject.SetActive(false);
-        this.mensagemTexto.gameObject.SetActive(false);
-
+       
     }
 
     public void jogar()
     {
-        this.BT_Play.SetActive(false);
+        for (int i = 0; i < button.Length; i++)
+        {
+            button[i].SetActive(false);
+        }
+
         this.BarraProgresso.gameObject.SetActive(true);
+        this.mensagemTexto.gameObject.SetActive(true);
         this.mensagemTexto.text = "carregando...";
         
         StartCoroutine(CarregarCena());
@@ -38,7 +47,7 @@ public class MenuPrincipalManager : MonoBehaviour
     }
     private IEnumerator CarregarCena()
     {
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("Bagulho");
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("Boss_Mapinguari");
         while (!asyncOperation.isDone)
         {
             this.BarraProgresso.value = asyncOperation.progress;
