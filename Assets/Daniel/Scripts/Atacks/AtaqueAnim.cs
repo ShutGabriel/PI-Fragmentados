@@ -19,6 +19,7 @@ public class AtaqueAnim : MonoBehaviour
         }
         else
         {
+            _moveplayer.energia--;
             _moveplayer.shotgunblast();
         }
     }

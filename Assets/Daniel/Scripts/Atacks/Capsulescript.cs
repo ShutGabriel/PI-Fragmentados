@@ -12,13 +12,6 @@ public class Capsulescript : MonoBehaviour
     public float lifetime;
     public float direction;
 
-
-
-
-
-
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -34,64 +27,20 @@ public class Capsulescript : MonoBehaviour
 
     public void setbulletdirection()
     {
-
-
         for (int i = 0; i < balas.Length; i++)
         {
-
-
             balas[i].GetComponent<ShootAttack>().direcao = direction;
-
-
-
-
-
-
+            balas[i].GetComponent<ShootAttack>().qualTiro = 1;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
-
-    
 
     public void bulletdeath()
     {
-
         lifetime-=Time.deltaTime;
-
 
         if (lifetime < 0)
         {
-
-
             Destroy(this.gameObject);
-
         }
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
-
 }

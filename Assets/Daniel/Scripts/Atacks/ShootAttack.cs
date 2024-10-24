@@ -8,12 +8,13 @@ public class ShootAttack : MonoBehaviour
     [SerializeField] float _speed;
     [SerializeField] Rigidbody2D _rb;
     [SerializeField] float timetodie;
+    public Moveplayer scPlayer;
     public control Player;
     public Animator animator;
     public bool shootanim;
     public bool timerativado;
     public float direcao;
-
+    public int qualTiro;
 
     // Start is called before the first frame update
     void Start()
@@ -45,11 +46,26 @@ public class ShootAttack : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {        
         if (collision.CompareTag("Inimigo"))
-        { 
-            if (collision.gameObject.GetComponent<ScMapinguari>())
+        {
+            if (qualTiro == 0)
             {
-                collision.gameObject.GetComponent<ScMapinguari>().Dano();
-                desativarbala();
+                if (collision.gameObject.GetComponent<ScMapinguari>())
+                {
+                    if (scPlayer.liberaTiro == false)
+                    {
+                        scPlayer.energia++;
+                    }
+                    collision.gameObject.GetComponent<ScMapinguari>().Dano();
+                    desativarbala();
+                }
+            }
+            else
+            {
+                if (collision.gameObject.GetComponent<ScMapinguari>())
+                {
+                    collision.gameObject.GetComponent<ScMapinguari>().Dano();
+                    desativarbala();
+                }
             }
         }
 
