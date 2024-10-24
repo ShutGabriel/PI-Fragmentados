@@ -44,8 +44,8 @@
             ],
             "bindings": [
                 {
-                    "name": "Movimento - teclado",
-                    "id": "92ffe217-a729-4b8b-a338-343cda41d798",
+                    "name": "Movimento - tecladoSetas",
+                    "id": "07d38b7e-9e02-45e6-a4f3-c9fe9167d60f",
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
@@ -56,8 +56,8 @@
                 },
                 {
                     "name": "up",
-                    "id": "cb7f9fa3-c313-4b53-baac-8c8f4b3a40ff",
-                    "path": "<Keyboard>/w",
+                    "id": "bdcbeec3-f04d-4de9-99a0-095a8b319380",
+                    "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "Player1",
@@ -67,8 +67,8 @@
                 },
                 {
                     "name": "down",
-                    "id": "f8d26a3f-d55c-4820-9c69-0db39cb9d853",
-                    "path": "<Keyboard>/s",
+                    "id": "3cd03036-301d-4470-a387-aaa9c0fb6159",
+                    "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "Player1",
@@ -78,8 +78,8 @@
                 },
                 {
                     "name": "left",
-                    "id": "3b2776f8-7c39-41dc-be50-d636ee8993b1",
-                    "path": "<Keyboard>/a",
+                    "id": "6d52545a-829f-4c81-8f1c-7f648e27b44f",
+                    "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "Player1",
@@ -89,8 +89,8 @@
                 },
                 {
                     "name": "right",
-                    "id": "1e965e6e-81d3-43db-a60c-6537ff590bdc",
-                    "path": "<Keyboard>/d",
+                    "id": "87882435-d491-4d76-a41a-7a2a05f04401",
+                    "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "Player1",
@@ -222,7 +222,7 @@
                 {
                     "name": "",
                     "id": "abaffc28-a30e-4b03-88f1-d54e93f69850",
-                    "path": "<Keyboard>/space",
+                    "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
                     "groups": "Player1",
@@ -233,7 +233,7 @@
                 {
                     "name": "",
                     "id": "51dad12c-d8fe-4bed-8eb5-e6c991735ff6",
-                    "path": "<Keyboard>/f",
+                    "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
                     "groups": "Player1",
@@ -255,10 +255,21 @@
                 {
                     "name": "",
                     "id": "1b8e3146-e3ca-426b-8719-3e42e1dd4dc0",
-                    "path": "<Keyboard>/g",
+                    "path": "<Keyboard>/f",
                     "interactions": "",
                     "processors": "",
                     "groups": "Player1",
+                    "action": "Supershoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1d14c7d9-ff75-4a5a-8e91-bf81213f8564",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "Supershoot",
                     "isComposite": false,
                     "isPartOfComposite": false

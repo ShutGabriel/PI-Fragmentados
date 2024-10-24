@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DesativarArea : MonoBehaviour
 {
+    public AreaDanoMapinguari danoMapinguari;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,5 +20,6 @@ public class DesativarArea : MonoBehaviour
     public void desativarObj()
     {
         this.gameObject.SetActive(false);
+        danoMapinguari.DanoAplicado = false;
     }
 }

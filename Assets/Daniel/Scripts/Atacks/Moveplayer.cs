@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.Pool;
 
@@ -23,13 +24,18 @@ public class Moveplayer : MonoBehaviour
     public Animator _animator;
     public bool shootanim;
 
+    [Header("StatosPlayer")]
+    public int hp;
+    public Slider sliderHpPlayer;
+    public GameControl gameControl;
 
     // Start is called before the first frame update
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
-
-
+        gameControl = GameObject.Find("Main Camera").GetComponent<GameControl>();
+        sliderHpPlayer = GameObject.Find("SliderPlayer").GetComponent<Slider>();
+        sliderHpPlayer.maxValue = hp;
     }
 
     // Update is called once per frame
@@ -48,6 +54,30 @@ public class Moveplayer : MonoBehaviour
         }
 
         animControl();
+        controleHp();
+    }
+
+    public void controleHp()
+    {
+        sliderHpPlayer.value = hp;
+
+        if (hp <= 0)
+        {
+            gameControl.GameOver();
+        }
+    }
+
+    public void Dano(int dano)
+    {
+        hp -= dano;
+        _animator.SetLayerWeight(2, 1);
+        Invoke("DesativarDano", 0.3f);
+    }
+
+    public void DesativarDano()
+    {
+        _animator.SetLayerWeight(2, 0);
+
     }
 
     public void SetMove(InputAction.CallbackContext value)
@@ -64,29 +94,6 @@ public class Moveplayer : MonoBehaviour
         transform.localScale = new Vector2(x, transform.localScale.y);
     }
 
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-
-        if (collision.gameObject.CompareTag("ground"))
-        {
-            Debug.Log("touched the ground");
-            _checkground = true;
-        }
-
-
-
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("ground"))
-        {
-            Debug.Log("left the ground");
-            _checkground = false;
-        }
-    }
-
     public void SetJump(InputAction.CallbackContext value)
     {
         if (_checkground == true)
@@ -96,7 +103,6 @@ public class Moveplayer : MonoBehaviour
             _animator.SetTrigger("Jump");
         }
     }
-
 
     public void shoot()
     {
@@ -111,12 +117,10 @@ public class Moveplayer : MonoBehaviour
     }
 
     public void bullet()
-    {
-        Debug.Log("0");
+    {        
         GameObject bala = BalaPool.SharedInstance.GetPooledObject();
         if (bala != null)
-        {
-            Debug.Log("1");
+        {          
             bala.transform.position = bulletPoint.position;
             bala.GetComponent<ShootAttack>().timerativado = true;
             bala.SetActive(true);
@@ -130,23 +134,17 @@ public class Moveplayer : MonoBehaviour
 
     }
 
-
-
-
     public void Shootfalse()
     {
         _animator.SetBool("ataqueBool", false);        
     }
-
 
     public void animControl()
     {
         if (_move.x != 0)
         {
             _animator.SetBool("Walk", true);
-
         }
-
         else
         {
 
@@ -159,15 +157,24 @@ public class Moveplayer : MonoBehaviour
 
     public void shotgunblast()
     {
-
-
-
         GameObject bala = Instantiate(shotgunbullet, bulletPoint.position, shotgunbullet.transform.rotation);
-
         bala.GetComponent<Capsulescript>().direction = transform.localScale.x;
-
 
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("ground"))
+        {
+            _checkground = true;
+        }
+    }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("ground"))
+        {
+            _checkground = false;
+        }
+    }
 }

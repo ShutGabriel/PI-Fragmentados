@@ -1,7 +1,6 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class ScMapinguari : MonoBehaviour
@@ -16,6 +15,7 @@ public class ScMapinguari : MonoBehaviour
 
     [Header("controleAnimaçoes")]
     public Animator _animator;
+    public Animator _animaDano;
     public bool trocarPosi;
     public bool introJaExecutada;
     public bool PosiJaSet;
@@ -42,12 +42,16 @@ public class ScMapinguari : MonoBehaviour
     [Header("controleAtaque1")]
     public float jumpPower;
     public bool pulando;
+    public int DanoAtaque1;
+    public GameObject Pedra;
+    public GameObject PlayerPosi;
 
 
     [Header("test tiro")]
     public bool testBool;
     public float qauntVezes;
     GameControl gameControl;
+    public MapinguariSom mpSom;
 
 
     void Start()
@@ -56,8 +60,8 @@ public class ScMapinguari : MonoBehaviour
         Hp = hpMax;
 
         gameControl = Camera.main.GetComponent<GameControl>();
-
-
+        mpSom = GameObject.Find("Sons").GetComponent<MapinguariSom>();
+        PlayerPosi = GameObject.Find("Player1");
     }
 
     // Update is called once per frame
@@ -76,7 +80,7 @@ public class ScMapinguari : MonoBehaviour
             testBool = true;
         }
 
-        controlesAtaque();      //test();
+        controlesAtaque();     
     }
 
     public void ControleSprite()
@@ -258,15 +262,34 @@ public class ScMapinguari : MonoBehaviour
     {
         Hp--;
         gameControl.LifeInimigo();
+        _animaDano.SetBool("Dano", true);
     }
 
-    
     public void Derrota()
     {
         if (Hp <= 0)
         {
             print("morreu");
           
+        }
+    }
+
+    public void spawnPedra()
+    {
+        Instantiate(Pedra,new Vector2(PlayerPosi.transform.position.x,Pedra.transform.position.y),Quaternion.identity);
+    }
+
+    public void finalAtaque()
+    {
+        tempoEntreAtaques = 1;
+        quantAtaques--;
+        if (qualAtaque == 0)
+        {
+            areaAtaque.SetActive(true);
+        }
+        else
+        {
+            spawnPedra();
         }
     }
 
@@ -306,13 +329,5 @@ public class ScMapinguari : MonoBehaviour
         }
     }
 
-   public void finalAtaque()
-    {
-        tempoEntreAtaques = 1;
-        quantAtaques--;
-        if (qualAtaque == 0)
-        {
-            areaAtaque.SetActive(true);
-        }
-    }
+   
 }
