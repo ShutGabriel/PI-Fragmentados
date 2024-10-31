@@ -148,7 +148,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.98, y: 0.95}
+  m_Size: {x: 1.0719715, y: 0.9500056}
   m_Direction: 1
 --- !u!114 &8338783567792522306
 MonoBehaviour:
@@ -165,11 +165,14 @@ MonoBehaviour:
   _speed: 10
   _rb: {fileID: -8841388916881140552}
   timetodie: 0
+  scPlayer: {fileID: 0}
   Player: {fileID: 0}
   animator: {fileID: 0}
   shootanim: 0
   timerativado: 0
   direcao: 0
+  qualTiro: 0
+  Hit: {fileID: 2764562577176481611, guid: e74cad508fc26d3489e4e0ca330cf007, type: 3}
 --- !u!1 &6836945514743533583
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,7 +246,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a2e74f87aed88fb4f8af0b9742553500, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

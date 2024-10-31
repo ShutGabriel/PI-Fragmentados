@@ -15,6 +15,7 @@ public class ShootAttack : MonoBehaviour
     public bool timerativado;
     public float direcao;
     public int qualTiro;
+    public GameObject Hit;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +41,10 @@ public class ShootAttack : MonoBehaviour
             _rb.transform.Translate(-_speed * Time.deltaTime, 0, 0);
         }
 
+    }
+    public void SpawnHit()
+    {
+        Instantiate(Hit, transform.position, transform.rotation);
     }
 
 
@@ -73,6 +78,7 @@ public class ShootAttack : MonoBehaviour
 
     public void desativarbala()
     {
+        SpawnHit();
         Destroy(this.gameObject);
         //gameObject.SetActive(false);
     }
