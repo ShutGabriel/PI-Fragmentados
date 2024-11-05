@@ -232,8 +232,19 @@
                 },
                 {
                     "name": "",
+                    "id": "fe487731-d800-4e55-9545-f31e8d9b48cc",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "51dad12c-d8fe-4bed-8eb5-e6c991735ff6",
-                    "path": "<Keyboard>/d",
+                    "path": "<Keyboard>/f",
                     "interactions": "",
                     "processors": "",
                     "groups": "Player1",
@@ -267,6 +278,17 @@
                     "name": "",
                     "id": "1d14c7d9-ff75-4a5a-8e91-bf81213f8564",
                     "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Supershoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3ca05255-987b-4595-bd40-490201d27c1c",
+                    "path": "<Keyboard>/g",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
