@@ -47,7 +47,7 @@ public class MenuPrincipalManager : MonoBehaviour
     }
     private IEnumerator CarregarCena()
     {
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("Gabriel-tutorial");
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("Boss_Mapinguari");
         while (!asyncOperation.isDone)
         {
             this.BarraProgresso.value = asyncOperation.progress;
