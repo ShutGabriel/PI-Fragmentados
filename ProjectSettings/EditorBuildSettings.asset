@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/gabriel/Gabriel-Tutorial.unity
+    guid: a055fa310d1cc694ebaf88d564be699b
   m_configObjects: {}

@@ -6,18 +6,20 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
-public class MenuPrincipalManager : MonoBehaviour
+public class TUTORIAL : MonoBehaviour
 {
-    [SerializeField]
-    public GameObject[] button; 
-    GameObject BT_Play;
-    GameObject Bt_Options;
-    GameObject BT_Quit;
-    [SerializeField]
-    private Slider BarraProgresso;
+
+
+
 
     [SerializeField]
+    public GameObject[] button;
+    GameObject BT_Next;
+    [SerializeField]
+    private Slider BarraProgresso2;
+    [SerializeField]
     private TextMeshProUGUI mensagemTexto;
+
 
     private void Start()
     {
@@ -26,9 +28,9 @@ public class MenuPrincipalManager : MonoBehaviour
             button[i].SetActive(true);
         }
 
-       
-        this.BarraProgresso.gameObject.SetActive(false);
-       
+
+        this.BarraProgresso2.gameObject.SetActive(false);
+
     }
 
     public void jogar()
@@ -38,23 +40,28 @@ public class MenuPrincipalManager : MonoBehaviour
             button[i].SetActive(false);
         }
 
-        this.BarraProgresso.gameObject.SetActive(true);
+        this.BarraProgresso2.gameObject.SetActive(true);
         this.mensagemTexto.gameObject.SetActive(true);
         this.mensagemTexto.text = "carregando...";
-        
+
         StartCoroutine(CarregarCena());
 
     }
+
     private IEnumerator CarregarCena()
     {
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("Gabriel-Tutorial");
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("Boss_Mapinguari");
         while (!asyncOperation.isDone)
         {
-            this.BarraProgresso.value = asyncOperation.progress;
+            this.BarraProgresso2.value = asyncOperation.progress;
             yield return null;
         }
 
 
 
     }
+
+
+
+
 }
