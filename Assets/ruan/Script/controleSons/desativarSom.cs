@@ -7,6 +7,7 @@ public class desativarSom : MonoBehaviour
 {
     public AudioSource audioAs;
 
+    public bool destruir;
     void Start()
     {
         audioAs.GetComponent<AudioSource>().Play();
@@ -21,9 +22,18 @@ public class desativarSom : MonoBehaviour
 
     public void desativar()
     {
+
         if (!audioAs.isPlaying)
         {
-            this.gameObject.SetActive(false);
+            if (destruir == false)
+            {
+                this.gameObject.SetActive(false);
+
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 }

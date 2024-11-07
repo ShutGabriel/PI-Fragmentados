@@ -16,6 +16,7 @@ public class ShootAttack : MonoBehaviour
     public float direcao;
     public int qualTiro;
     public GameObject Hit;
+    public GameObject som;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +46,8 @@ public class ShootAttack : MonoBehaviour
     public void SpawnHit()
     {
         Instantiate(Hit, transform.position, transform.rotation);
+        Instantiate(som, transform.position, transform.rotation);
+
     }
 
 
