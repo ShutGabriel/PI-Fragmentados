@@ -173,6 +173,7 @@ MonoBehaviour:
   direcao: 0
   qualTiro: 0
   Hit: {fileID: 2764562577176481611, guid: e74cad508fc26d3489e4e0ca330cf007, type: 3}
+  som: {fileID: 3021735703459742106, guid: ee289d9ba62822b469ed7c5144109337, type: 3}
 --- !u!1 &6836945514743533583
 GameObject:
   m_ObjectHideFlags: 0
