@@ -164,7 +164,7 @@ public class ScMapinguari : MonoBehaviour
 
             if (NextAtqTime <= 0)
             {
-                if (Hp <= hpMax / 2)
+                if (Hp <= hpMax / 1.333f)
                 {
                     qualAtaque = Random.Range(0,2);
                     quantAtaques = Random.Range(5, 10);

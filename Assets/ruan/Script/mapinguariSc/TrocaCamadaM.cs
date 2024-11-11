@@ -6,6 +6,7 @@ using UnityEngine;
 public class TrocaCamadaM : MonoBehaviour
 {
     public ScMapinguari ScMapinguari;
+    public efeitoCamera efeitoCamera;
 
 
     // Start is called before the first frame update
@@ -64,6 +65,8 @@ public class TrocaCamadaM : MonoBehaviour
     public void SomimpactoChao()
     {
         ScMapinguari.mpSom.ativarSom(2);
+        efeitoCamera.TremerTela();
+
 
     }
 }

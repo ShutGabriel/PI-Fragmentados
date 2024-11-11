@@ -30,7 +30,7 @@ public class ShootAttack : MonoBehaviour
     {
         if (timerativado == false)
         {
-            Invoke("desativarbala",3);
+            Invoke("DestruirBala", 3);
             timerativado = true;
         }
         if (direcao > 0)
@@ -86,6 +86,12 @@ public class ShootAttack : MonoBehaviour
         //gameObject.SetActive(false);
     }
 
+
+    public void DestruirBala()
+    {
+        Destroy(this.gameObject);
+
+    }
     public void speedactivate()
     {
         Player = Camera.main.GetComponent<control>();
