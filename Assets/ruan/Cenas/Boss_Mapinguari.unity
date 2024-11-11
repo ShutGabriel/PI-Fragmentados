@@ -2469,7 +2469,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -712, y: -52}
+  m_AnchoredPosition: {x: -712, y: -40}
   m_SizeDelta: {x: 496.62, y: 105.12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1217077955
@@ -3269,7 +3269,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.7771387
+  orthographic size: 4.7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3474,6 +3474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07df7f1488d9a7e4abd1c93a5eb54575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 1582769319}
 --- !u!1 &1597393717
 GameObject:
   m_ObjectHideFlags: 0
@@ -4385,7 +4386,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2026104885
 RectTransform:
   m_ObjectHideFlags: 0
