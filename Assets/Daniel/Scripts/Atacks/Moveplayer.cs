@@ -35,6 +35,7 @@ public class Moveplayer : MonoBehaviour
     public int qualTiro;
     public bool liberaTiro;
     public GameObject btnUi;
+    public SomPlayer scPlayer;
 
 
     // Start is called before the first frame update
@@ -96,13 +97,14 @@ public class Moveplayer : MonoBehaviour
             gameControl.GameOver();
         }
 
-        btnUi.SetActive(liberaTiro);
+       // btnUi.SetActive(liberaTiro);
     }
 
     public void Dano(int dano)
     {
         hp -= dano;
         _animator.SetLayerWeight(2, 1);
+        scPlayer.ativarSom(2);
         Invoke("DesativarDano", 0.3f);
     }
 
@@ -130,6 +132,8 @@ public class Moveplayer : MonoBehaviour
     {
         if (_checkground == true)
         {
+            scPlayer.ativarSom(1);
+
             _rb.velocity = new Vector2(_rb.velocity.x, 0);
             _rb.AddForce(Vector2.up * _forceJump, ForceMode2D.Impulse);
             _animator.SetTrigger("Jump");
@@ -148,7 +152,7 @@ public class Moveplayer : MonoBehaviour
         if (liberaTiro == true)
         {
             qualTiro = 1;
-           
+            scPlayer.ativarSom(0);
             _animator.SetBool("ataqueBool", true);
             Invoke("Shootfalse", 0.5f);
         }
@@ -168,14 +172,17 @@ public class Moveplayer : MonoBehaviour
         {
 
         }*/
-        
-       GameObject tiro =  Instantiate(bala, bulletPoint.position, bala.transform.rotation);
+
+        scPlayer.ativarSom(0);
+
+        GameObject tiro =  Instantiate(bala, bulletPoint.position, bala.transform.rotation);
         tiro.GetComponent<ShootAttack>().scPlayer = this;
         tiro.GetComponent<ShootAttack>().direcao = transform.localScale.x;
     }
 
     public void Shootfalse()
     {
+
         _animator.SetBool("ataqueBool", false);        
     }
 

@@ -60,7 +60,6 @@ public class ScMapinguari : MonoBehaviour
         Hp = hpMax;
 
         gameControl = Camera.main.GetComponent<GameControl>();
-        mpSom = GameObject.Find("Sons").GetComponent<MapinguariSom>();
         PlayerPosi = GameObject.Find("Player1");
     }
 
@@ -103,9 +102,6 @@ public class ScMapinguari : MonoBehaviour
             {
                 boxCollider[i].enabled = true;
             }
-
-
-
         }
         else
         {
@@ -136,8 +132,7 @@ public class ScMapinguari : MonoBehaviour
                     UltimaPosiX = transform.position.x;
                     transform.position = new Vector2(posiArvore[1], transform.position.y);
                     transform.localScale = new Vector3(-0.4f, 0.4f,0);
-                    PosiJaSet = true;
-                   
+                    PosiJaSet = true;                   
                 }
 
             }
