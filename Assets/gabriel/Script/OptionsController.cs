@@ -13,9 +13,9 @@ public class OptionsController : MonoBehaviour
     private bool isActive = false;
     private void Start()
     {
-        OptionsMenu.SetActive(false);
+       // OptionsMenu.SetActive(false);
 
-        optionsButton.onClick.AddListener(ToggleOptionsMenu);
+        //optionsButton.onClick.AddListener(ToggleOptionsMenu);
 
         VolumeSlider.onValueChanged.AddListener(AdjustVolume);
 

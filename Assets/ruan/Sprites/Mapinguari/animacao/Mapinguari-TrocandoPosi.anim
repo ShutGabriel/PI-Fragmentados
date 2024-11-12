@@ -4101,7 +4101,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1
+  - time: 0.75
     functionName: trocarLayerImagens
     data: 
     objectReferenceParameter: {fileID: 0}

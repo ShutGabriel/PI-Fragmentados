@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/gabriel/Gabriel-Tutorial.unity
     guid: a055fa310d1cc694ebaf88d564be699b
+  - enabled: 1
+    path: Assets/ruan/Cenas/Obrigado Por Jogar.unity
+    guid: 209b54902ea0de24c92add85d32d7d3d
   m_configObjects: {}

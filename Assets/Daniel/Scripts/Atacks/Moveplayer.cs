@@ -97,7 +97,7 @@ public class Moveplayer : MonoBehaviour
             gameControl.GameOver();
         }
 
-       // btnUi.SetActive(liberaTiro);
+       btnUi.SetActive(liberaTiro);
     }
 
     public void Dano(int dano)

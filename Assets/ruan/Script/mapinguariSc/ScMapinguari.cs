@@ -2,6 +2,7 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ScMapinguari : MonoBehaviour
 {
@@ -67,7 +68,8 @@ public class ScMapinguari : MonoBehaviour
     void Update()
     {
         ControleSprite();
-        controlesAtaque();     
+        controlesAtaque();
+        Derrota();
     }
 
     public void ControleSprite()
@@ -162,15 +164,15 @@ public class ScMapinguari : MonoBehaviour
                 if (Hp <= hpMax / 1.333f)
                 {
                     qualAtaque = Random.Range(0,2);
-                    quantAtaques = Random.Range(5, 10);
-                    TempoMaxAtq = Random.Range(3,7);
+                    quantAtaques = Random.Range(2, 4);
+                    TempoMaxAtq = Random.Range(3,5);
                     NextAtqTime = TempoMaxAtq;
                 }
                 else
                 {
                     qualAtaque = 0;
-                    quantAtaques = Random.Range(2, 4);
-                    TempoMaxAtq = Random.Range(4, 8);
+                    quantAtaques = Random.Range(1, 4);
+                    TempoMaxAtq = Random.Range(4, 5);
                     NextAtqTime = TempoMaxAtq;
                 }
 
@@ -252,6 +254,7 @@ public class ScMapinguari : MonoBehaviour
     {
         if (Hp <= 0)
         {
+            SceneManager.LoadScene("Obrigado Por Jogar");
             print("morreu");
           
         }
