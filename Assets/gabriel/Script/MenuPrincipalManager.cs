@@ -52,8 +52,10 @@ public class MenuPrincipalManager : MonoBehaviour
             this.BarraProgresso.value = asyncOperation.progress;
             yield return null;
         }
+    }
 
-
-
+    public void sairJogo()
+    {
+        Application.Quit();
     }
 }
